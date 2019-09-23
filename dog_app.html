@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>dog_app</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+
+<title>dog_app</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
 
 <style type="text/css">
     /*!
@@ -199,7 +204,6 @@ th {
   *:before,
   *:after {
     background: transparent !important;
-    color: #000 !important;
     box-shadow: none !important;
     text-shadow: none !important;
   }
@@ -6744,15 +6748,15 @@ button.close {
 *
 */
 /*!
- *  Font Awesome 4.2.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
 /* FONT PATH
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url('../components/font-awesome/fonts/fontawesome-webfont.eot?v=4.2.0');
-  src: url('../components/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.2.0') format('embedded-opentype'), url('../components/font-awesome/fonts/fontawesome-webfont.woff?v=4.2.0') format('woff'), url('../components/font-awesome/fonts/fontawesome-webfont.ttf?v=4.2.0') format('truetype'), url('../components/font-awesome/fonts/fontawesome-webfont.svg?v=4.2.0#fontawesomeregular') format('svg');
+  src: url('../components/font-awesome/fonts/fontawesome-webfont.eot?v=4.7.0');
+  src: url('../components/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('../components/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('../components/font-awesome/fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('../components/font-awesome/fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('../components/font-awesome/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -6809,6 +6813,19 @@ button.close {
   border: solid 0.08em #eee;
   border-radius: .1em;
 }
+.fa-pull-left {
+  float: left;
+}
+.fa-pull-right {
+  float: right;
+}
+.fa.fa-pull-left {
+  margin-right: .3em;
+}
+.fa.fa-pull-right {
+  margin-left: .3em;
+}
+/* Deprecated as of 4.4.0 */
 .pull-right {
   float: right;
 }
@@ -6824,6 +6841,10 @@ button.close {
 .fa-spin {
   -webkit-animation: fa-spin 2s infinite linear;
   animation: fa-spin 2s infinite linear;
+}
+.fa-pulse {
+  -webkit-animation: fa-spin 1s infinite steps(8);
+  animation: fa-spin 1s infinite steps(8);
 }
 @-webkit-keyframes fa-spin {
   0% {
@@ -6846,31 +6867,31 @@ button.close {
   }
 }
 .fa-rotate-90 {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 .fa-rotate-180 {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 .fa-rotate-270 {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
   -webkit-transform: rotate(270deg);
   -ms-transform: rotate(270deg);
   transform: rotate(270deg);
 }
 .fa-flip-horizontal {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1);
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
   -webkit-transform: scale(-1, 1);
   -ms-transform: scale(-1, 1);
   transform: scale(-1, 1);
 }
 .fa-flip-vertical {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1);
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
   -webkit-transform: scale(1, -1);
   -ms-transform: scale(1, -1);
   transform: scale(1, -1);
@@ -7355,6 +7376,7 @@ button.close {
 .fa-twitter:before {
   content: "\f099";
 }
+.fa-facebook-f:before,
 .fa-facebook:before {
   content: "\f09a";
 }
@@ -7367,6 +7389,7 @@ button.close {
 .fa-credit-card:before {
   content: "\f09d";
 }
+.fa-feed:before,
 .fa-rss:before {
   content: "\f09e";
 }
@@ -8004,7 +8027,8 @@ button.close {
 .fa-male:before {
   content: "\f183";
 }
-.fa-gittip:before {
+.fa-gittip:before,
+.fa-gratipay:before {
   content: "\f184";
 }
 .fa-sun-o:before {
@@ -8108,7 +8132,7 @@ button.close {
 .fa-digg:before {
   content: "\f1a6";
 }
-.fa-pied-piper:before {
+.fa-pied-piper-pp:before {
   content: "\f1a7";
 }
 .fa-pied-piper-alt:before {
@@ -8234,6 +8258,7 @@ button.close {
   content: "\f1ce";
 }
 .fa-ra:before,
+.fa-resistance:before,
 .fa-rebel:before {
   content: "\f1d0";
 }
@@ -8247,6 +8272,8 @@ button.close {
 .fa-git:before {
   content: "\f1d3";
 }
+.fa-y-combinator-square:before,
+.fa-yc-square:before,
 .fa-hacker-news:before {
   content: "\f1d4";
 }
@@ -8414,6 +8441,657 @@ button.close {
 }
 .fa-meanpath:before {
   content: "\f20c";
+}
+.fa-buysellads:before {
+  content: "\f20d";
+}
+.fa-connectdevelop:before {
+  content: "\f20e";
+}
+.fa-dashcube:before {
+  content: "\f210";
+}
+.fa-forumbee:before {
+  content: "\f211";
+}
+.fa-leanpub:before {
+  content: "\f212";
+}
+.fa-sellsy:before {
+  content: "\f213";
+}
+.fa-shirtsinbulk:before {
+  content: "\f214";
+}
+.fa-simplybuilt:before {
+  content: "\f215";
+}
+.fa-skyatlas:before {
+  content: "\f216";
+}
+.fa-cart-plus:before {
+  content: "\f217";
+}
+.fa-cart-arrow-down:before {
+  content: "\f218";
+}
+.fa-diamond:before {
+  content: "\f219";
+}
+.fa-ship:before {
+  content: "\f21a";
+}
+.fa-user-secret:before {
+  content: "\f21b";
+}
+.fa-motorcycle:before {
+  content: "\f21c";
+}
+.fa-street-view:before {
+  content: "\f21d";
+}
+.fa-heartbeat:before {
+  content: "\f21e";
+}
+.fa-venus:before {
+  content: "\f221";
+}
+.fa-mars:before {
+  content: "\f222";
+}
+.fa-mercury:before {
+  content: "\f223";
+}
+.fa-intersex:before,
+.fa-transgender:before {
+  content: "\f224";
+}
+.fa-transgender-alt:before {
+  content: "\f225";
+}
+.fa-venus-double:before {
+  content: "\f226";
+}
+.fa-mars-double:before {
+  content: "\f227";
+}
+.fa-venus-mars:before {
+  content: "\f228";
+}
+.fa-mars-stroke:before {
+  content: "\f229";
+}
+.fa-mars-stroke-v:before {
+  content: "\f22a";
+}
+.fa-mars-stroke-h:before {
+  content: "\f22b";
+}
+.fa-neuter:before {
+  content: "\f22c";
+}
+.fa-genderless:before {
+  content: "\f22d";
+}
+.fa-facebook-official:before {
+  content: "\f230";
+}
+.fa-pinterest-p:before {
+  content: "\f231";
+}
+.fa-whatsapp:before {
+  content: "\f232";
+}
+.fa-server:before {
+  content: "\f233";
+}
+.fa-user-plus:before {
+  content: "\f234";
+}
+.fa-user-times:before {
+  content: "\f235";
+}
+.fa-hotel:before,
+.fa-bed:before {
+  content: "\f236";
+}
+.fa-viacoin:before {
+  content: "\f237";
+}
+.fa-train:before {
+  content: "\f238";
+}
+.fa-subway:before {
+  content: "\f239";
+}
+.fa-medium:before {
+  content: "\f23a";
+}
+.fa-yc:before,
+.fa-y-combinator:before {
+  content: "\f23b";
+}
+.fa-optin-monster:before {
+  content: "\f23c";
+}
+.fa-opencart:before {
+  content: "\f23d";
+}
+.fa-expeditedssl:before {
+  content: "\f23e";
+}
+.fa-battery-4:before,
+.fa-battery:before,
+.fa-battery-full:before {
+  content: "\f240";
+}
+.fa-battery-3:before,
+.fa-battery-three-quarters:before {
+  content: "\f241";
+}
+.fa-battery-2:before,
+.fa-battery-half:before {
+  content: "\f242";
+}
+.fa-battery-1:before,
+.fa-battery-quarter:before {
+  content: "\f243";
+}
+.fa-battery-0:before,
+.fa-battery-empty:before {
+  content: "\f244";
+}
+.fa-mouse-pointer:before {
+  content: "\f245";
+}
+.fa-i-cursor:before {
+  content: "\f246";
+}
+.fa-object-group:before {
+  content: "\f247";
+}
+.fa-object-ungroup:before {
+  content: "\f248";
+}
+.fa-sticky-note:before {
+  content: "\f249";
+}
+.fa-sticky-note-o:before {
+  content: "\f24a";
+}
+.fa-cc-jcb:before {
+  content: "\f24b";
+}
+.fa-cc-diners-club:before {
+  content: "\f24c";
+}
+.fa-clone:before {
+  content: "\f24d";
+}
+.fa-balance-scale:before {
+  content: "\f24e";
+}
+.fa-hourglass-o:before {
+  content: "\f250";
+}
+.fa-hourglass-1:before,
+.fa-hourglass-start:before {
+  content: "\f251";
+}
+.fa-hourglass-2:before,
+.fa-hourglass-half:before {
+  content: "\f252";
+}
+.fa-hourglass-3:before,
+.fa-hourglass-end:before {
+  content: "\f253";
+}
+.fa-hourglass:before {
+  content: "\f254";
+}
+.fa-hand-grab-o:before,
+.fa-hand-rock-o:before {
+  content: "\f255";
+}
+.fa-hand-stop-o:before,
+.fa-hand-paper-o:before {
+  content: "\f256";
+}
+.fa-hand-scissors-o:before {
+  content: "\f257";
+}
+.fa-hand-lizard-o:before {
+  content: "\f258";
+}
+.fa-hand-spock-o:before {
+  content: "\f259";
+}
+.fa-hand-pointer-o:before {
+  content: "\f25a";
+}
+.fa-hand-peace-o:before {
+  content: "\f25b";
+}
+.fa-trademark:before {
+  content: "\f25c";
+}
+.fa-registered:before {
+  content: "\f25d";
+}
+.fa-creative-commons:before {
+  content: "\f25e";
+}
+.fa-gg:before {
+  content: "\f260";
+}
+.fa-gg-circle:before {
+  content: "\f261";
+}
+.fa-tripadvisor:before {
+  content: "\f262";
+}
+.fa-odnoklassniki:before {
+  content: "\f263";
+}
+.fa-odnoklassniki-square:before {
+  content: "\f264";
+}
+.fa-get-pocket:before {
+  content: "\f265";
+}
+.fa-wikipedia-w:before {
+  content: "\f266";
+}
+.fa-safari:before {
+  content: "\f267";
+}
+.fa-chrome:before {
+  content: "\f268";
+}
+.fa-firefox:before {
+  content: "\f269";
+}
+.fa-opera:before {
+  content: "\f26a";
+}
+.fa-internet-explorer:before {
+  content: "\f26b";
+}
+.fa-tv:before,
+.fa-television:before {
+  content: "\f26c";
+}
+.fa-contao:before {
+  content: "\f26d";
+}
+.fa-500px:before {
+  content: "\f26e";
+}
+.fa-amazon:before {
+  content: "\f270";
+}
+.fa-calendar-plus-o:before {
+  content: "\f271";
+}
+.fa-calendar-minus-o:before {
+  content: "\f272";
+}
+.fa-calendar-times-o:before {
+  content: "\f273";
+}
+.fa-calendar-check-o:before {
+  content: "\f274";
+}
+.fa-industry:before {
+  content: "\f275";
+}
+.fa-map-pin:before {
+  content: "\f276";
+}
+.fa-map-signs:before {
+  content: "\f277";
+}
+.fa-map-o:before {
+  content: "\f278";
+}
+.fa-map:before {
+  content: "\f279";
+}
+.fa-commenting:before {
+  content: "\f27a";
+}
+.fa-commenting-o:before {
+  content: "\f27b";
+}
+.fa-houzz:before {
+  content: "\f27c";
+}
+.fa-vimeo:before {
+  content: "\f27d";
+}
+.fa-black-tie:before {
+  content: "\f27e";
+}
+.fa-fonticons:before {
+  content: "\f280";
+}
+.fa-reddit-alien:before {
+  content: "\f281";
+}
+.fa-edge:before {
+  content: "\f282";
+}
+.fa-credit-card-alt:before {
+  content: "\f283";
+}
+.fa-codiepie:before {
+  content: "\f284";
+}
+.fa-modx:before {
+  content: "\f285";
+}
+.fa-fort-awesome:before {
+  content: "\f286";
+}
+.fa-usb:before {
+  content: "\f287";
+}
+.fa-product-hunt:before {
+  content: "\f288";
+}
+.fa-mixcloud:before {
+  content: "\f289";
+}
+.fa-scribd:before {
+  content: "\f28a";
+}
+.fa-pause-circle:before {
+  content: "\f28b";
+}
+.fa-pause-circle-o:before {
+  content: "\f28c";
+}
+.fa-stop-circle:before {
+  content: "\f28d";
+}
+.fa-stop-circle-o:before {
+  content: "\f28e";
+}
+.fa-shopping-bag:before {
+  content: "\f290";
+}
+.fa-shopping-basket:before {
+  content: "\f291";
+}
+.fa-hashtag:before {
+  content: "\f292";
+}
+.fa-bluetooth:before {
+  content: "\f293";
+}
+.fa-bluetooth-b:before {
+  content: "\f294";
+}
+.fa-percent:before {
+  content: "\f295";
+}
+.fa-gitlab:before {
+  content: "\f296";
+}
+.fa-wpbeginner:before {
+  content: "\f297";
+}
+.fa-wpforms:before {
+  content: "\f298";
+}
+.fa-envira:before {
+  content: "\f299";
+}
+.fa-universal-access:before {
+  content: "\f29a";
+}
+.fa-wheelchair-alt:before {
+  content: "\f29b";
+}
+.fa-question-circle-o:before {
+  content: "\f29c";
+}
+.fa-blind:before {
+  content: "\f29d";
+}
+.fa-audio-description:before {
+  content: "\f29e";
+}
+.fa-volume-control-phone:before {
+  content: "\f2a0";
+}
+.fa-braille:before {
+  content: "\f2a1";
+}
+.fa-assistive-listening-systems:before {
+  content: "\f2a2";
+}
+.fa-asl-interpreting:before,
+.fa-american-sign-language-interpreting:before {
+  content: "\f2a3";
+}
+.fa-deafness:before,
+.fa-hard-of-hearing:before,
+.fa-deaf:before {
+  content: "\f2a4";
+}
+.fa-glide:before {
+  content: "\f2a5";
+}
+.fa-glide-g:before {
+  content: "\f2a6";
+}
+.fa-signing:before,
+.fa-sign-language:before {
+  content: "\f2a7";
+}
+.fa-low-vision:before {
+  content: "\f2a8";
+}
+.fa-viadeo:before {
+  content: "\f2a9";
+}
+.fa-viadeo-square:before {
+  content: "\f2aa";
+}
+.fa-snapchat:before {
+  content: "\f2ab";
+}
+.fa-snapchat-ghost:before {
+  content: "\f2ac";
+}
+.fa-snapchat-square:before {
+  content: "\f2ad";
+}
+.fa-pied-piper:before {
+  content: "\f2ae";
+}
+.fa-first-order:before {
+  content: "\f2b0";
+}
+.fa-yoast:before {
+  content: "\f2b1";
+}
+.fa-themeisle:before {
+  content: "\f2b2";
+}
+.fa-google-plus-circle:before,
+.fa-google-plus-official:before {
+  content: "\f2b3";
+}
+.fa-fa:before,
+.fa-font-awesome:before {
+  content: "\f2b4";
+}
+.fa-handshake-o:before {
+  content: "\f2b5";
+}
+.fa-envelope-open:before {
+  content: "\f2b6";
+}
+.fa-envelope-open-o:before {
+  content: "\f2b7";
+}
+.fa-linode:before {
+  content: "\f2b8";
+}
+.fa-address-book:before {
+  content: "\f2b9";
+}
+.fa-address-book-o:before {
+  content: "\f2ba";
+}
+.fa-vcard:before,
+.fa-address-card:before {
+  content: "\f2bb";
+}
+.fa-vcard-o:before,
+.fa-address-card-o:before {
+  content: "\f2bc";
+}
+.fa-user-circle:before {
+  content: "\f2bd";
+}
+.fa-user-circle-o:before {
+  content: "\f2be";
+}
+.fa-user-o:before {
+  content: "\f2c0";
+}
+.fa-id-badge:before {
+  content: "\f2c1";
+}
+.fa-drivers-license:before,
+.fa-id-card:before {
+  content: "\f2c2";
+}
+.fa-drivers-license-o:before,
+.fa-id-card-o:before {
+  content: "\f2c3";
+}
+.fa-quora:before {
+  content: "\f2c4";
+}
+.fa-free-code-camp:before {
+  content: "\f2c5";
+}
+.fa-telegram:before {
+  content: "\f2c6";
+}
+.fa-thermometer-4:before,
+.fa-thermometer:before,
+.fa-thermometer-full:before {
+  content: "\f2c7";
+}
+.fa-thermometer-3:before,
+.fa-thermometer-three-quarters:before {
+  content: "\f2c8";
+}
+.fa-thermometer-2:before,
+.fa-thermometer-half:before {
+  content: "\f2c9";
+}
+.fa-thermometer-1:before,
+.fa-thermometer-quarter:before {
+  content: "\f2ca";
+}
+.fa-thermometer-0:before,
+.fa-thermometer-empty:before {
+  content: "\f2cb";
+}
+.fa-shower:before {
+  content: "\f2cc";
+}
+.fa-bathtub:before,
+.fa-s15:before,
+.fa-bath:before {
+  content: "\f2cd";
+}
+.fa-podcast:before {
+  content: "\f2ce";
+}
+.fa-window-maximize:before {
+  content: "\f2d0";
+}
+.fa-window-minimize:before {
+  content: "\f2d1";
+}
+.fa-window-restore:before {
+  content: "\f2d2";
+}
+.fa-times-rectangle:before,
+.fa-window-close:before {
+  content: "\f2d3";
+}
+.fa-times-rectangle-o:before,
+.fa-window-close-o:before {
+  content: "\f2d4";
+}
+.fa-bandcamp:before {
+  content: "\f2d5";
+}
+.fa-grav:before {
+  content: "\f2d6";
+}
+.fa-etsy:before {
+  content: "\f2d7";
+}
+.fa-imdb:before {
+  content: "\f2d8";
+}
+.fa-ravelry:before {
+  content: "\f2d9";
+}
+.fa-eercast:before {
+  content: "\f2da";
+}
+.fa-microchip:before {
+  content: "\f2db";
+}
+.fa-snowflake-o:before {
+  content: "\f2dc";
+}
+.fa-superpowers:before {
+  content: "\f2dd";
+}
+.fa-wpexplorer:before {
+  content: "\f2de";
+}
+.fa-meetup:before {
+  content: "\f2e0";
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+}
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
 }
 /*!
 *
@@ -8694,6 +9372,10 @@ div.traceback-wrapper {
   max-width: 800px;
   margin: auto;
 }
+div.traceback-wrapper pre.traceback {
+  max-height: 600px;
+  overflow: auto;
+}
 /**
  * Primary styles
  *
@@ -8719,6 +9401,10 @@ body > #header {
   z-index: 100;
 }
 body > #header #header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5px;
   padding-bottom: 5px;
   padding-top: 5px;
   box-sizing: border-box;
@@ -8750,13 +9436,16 @@ body > #header .header-bar {
   padding-top: 1px;
   padding-bottom: 1px;
 }
-@media (max-width: 991px) {
-  #ipython_notebook {
-    margin-left: 10px;
-  }
-}
 [dir="rtl"] #ipython_notebook {
+  margin-right: 10px;
+  margin-left: 0;
+}
+[dir="rtl"] #ipython_notebook.pull-left {
   float: right !important;
+  float: right;
+}
+.flex-spacer {
+  flex: 1;
 }
 #noscript {
   width: auto;
@@ -8791,8 +9480,14 @@ body > #header .header-bar {
 input.ui-button {
   padding: 0.3em 0.9em;
 }
+span#kernel_logo_widget {
+  margin: 0 10px;
+}
 span#login_widget {
   float: right;
+}
+[dir="rtl"] span#login_widget {
+  float: left;
 }
 span#login_widget > .button,
 #logout {
@@ -8908,6 +9603,9 @@ span#login_widget > .button .badge,
   overflow: auto;
   flex: 1;
 }
+.modal-header {
+  cursor: move;
+}
 @media (min-width: 768px) {
   .modal .modal-dialog {
     width: 700px;
@@ -8928,6 +9626,19 @@ span#login_widget > .button .badge,
   display: inline-block;
   margin-bottom: -4px;
 }
+[dir="rtl"] .center-nav form.pull-left {
+  float: right !important;
+  float: right;
+}
+[dir="rtl"] .center-nav .navbar-text {
+  float: right;
+}
+[dir="rtl"] .navbar-inner {
+  text-align: right;
+}
+[dir="rtl"] div.text-left {
+  text-align: right;
+}
 /*!
 *
 * IPython tree view
@@ -8944,34 +9655,42 @@ span#login_widget > .button .badge,
   margin: 0;
 }
 .alternate_upload input.fileinput {
-  text-align: center;
-  vertical-align: middle;
-  display: inline;
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  cursor: pointer;
   opacity: 0;
   z-index: 2;
-  width: 12ex;
-  margin-right: -12ex;
+}
+.alternate_upload .btn-xs > input.fileinput {
+  margin: -1px -5px;
 }
 .alternate_upload .btn-upload {
+  position: relative;
   height: 22px;
+}
+::-webkit-file-upload-button {
+  cursor: pointer;
 }
 /**
  * Primary styles
  *
  * Author: Jupyter Development Team
  */
-[dir="rtl"] #tabs li {
-  float: right;
-}
 ul#tabs {
   margin-bottom: 4px;
-}
-[dir="rtl"] ul#tabs {
-  margin-right: 0px;
 }
 ul#tabs a {
   padding-top: 6px;
   padding-bottom: 4px;
+}
+[dir="rtl"] ul#tabs.nav-tabs > li {
+  float: right;
+}
+[dir="rtl"] ul#tabs.nav.nav-tabs {
+  padding-right: 0;
 }
 ul.breadcrumb a:focus,
 ul.breadcrumb a:hover {
@@ -8991,15 +9710,13 @@ ul.breadcrumb span {
 .list_toolbar .tree-buttons {
   padding-top: 1px;
 }
-[dir="rtl"] .list_toolbar .tree-buttons {
+[dir="rtl"] .list_toolbar .tree-buttons .pull-right {
   float: left !important;
+  float: left;
 }
-[dir="rtl"] .list_toolbar .pull-right {
-  padding-top: 1px;
-  float: left !important;
-}
-[dir="rtl"] .list_toolbar .pull-left {
-  float: right !important;
+[dir="rtl"] .list_toolbar .col-sm-4,
+[dir="rtl"] .list_toolbar .col-sm-8 {
+  float: right;
 }
 .dynamic-buttons {
   padding-top: 3px;
@@ -9055,7 +9772,7 @@ ul.breadcrumb span {
 .list_item > div input {
   margin-right: 7px;
   margin-left: 14px;
-  vertical-align: baseline;
+  vertical-align: text-bottom;
   line-height: 22px;
   position: relative;
   top: -1px;
@@ -9065,6 +9782,9 @@ ul.breadcrumb span {
   margin-left: -1px;
   vertical-align: baseline;
   line-height: 22px;
+}
+[dir="rtl"] .list_item > div input {
+  margin-right: 0;
 }
 .new-file input[type=checkbox] {
   visibility: hidden;
@@ -9080,6 +9800,14 @@ ul.breadcrumb span {
   margin-left: 7px;
   line-height: 22px;
   vertical-align: baseline;
+}
+.item_modified {
+  margin-right: 7px;
+  margin-left: 7px;
+}
+[dir="rtl"] .item_modified.pull-right {
+  float: left !important;
+  float: left;
 }
 .item_buttons {
   line-height: 1em;
@@ -9108,6 +9836,14 @@ ul.breadcrumb span {
   margin-right: 7px;
   float: left;
 }
+[dir="rtl"] .item_buttons.pull-right {
+  float: left !important;
+  float: left;
+}
+[dir="rtl"] .item_buttons .kernel-name {
+  margin-left: 7px;
+  float: right;
+}
 .toolbar_info {
   height: 24px;
   line-height: 24px;
@@ -9133,18 +9869,32 @@ ul.breadcrumb span {
   background-color: transparent;
   font-weight: bold;
 }
+.sort_button {
+  display: inline-block;
+  padding-left: 7px;
+}
+[dir="rtl"] .sort_button.pull-right {
+  float: left !important;
+  float: left;
+}
 #tree-selector {
   padding-right: 0px;
-}
-[dir="rtl"] #tree-selector a {
-  float: right;
 }
 #button-select-all {
   min-width: 50px;
 }
+[dir="rtl"] #button-select-all.btn {
+  float: right ;
+}
 #select-all {
   margin-left: 7px;
   margin-right: 2px;
+  margin-top: 2px;
+  height: 16px;
+}
+[dir="rtl"] #select-all.pull-left {
+  float: right !important;
+  float: right;
 }
 .menu_icon {
   margin-right: 2px;
@@ -9162,6 +9912,12 @@ ul.breadcrumb span {
   -moz-osx-font-smoothing: grayscale;
   content: "\f114";
 }
+.folder_icon:before.fa-pull-left {
+  margin-right: .3em;
+}
+.folder_icon:before.fa-pull-right {
+  margin-left: .3em;
+}
 .folder_icon:before.pull-left {
   margin-right: .3em;
 }
@@ -9178,6 +9934,12 @@ ul.breadcrumb span {
   content: "\f02d";
   position: relative;
   top: -1px;
+}
+.notebook_icon:before.fa-pull-left {
+  margin-right: .3em;
+}
+.notebook_icon:before.fa-pull-right {
+  margin-left: .3em;
 }
 .notebook_icon:before.pull-left {
   margin-right: .3em;
@@ -9197,6 +9959,12 @@ ul.breadcrumb span {
   top: -1px;
   color: #5cb85c;
 }
+.running_notebook_icon:before.fa-pull-left {
+  margin-right: .3em;
+}
+.running_notebook_icon:before.fa-pull-right {
+  margin-left: .3em;
+}
 .running_notebook_icon:before.pull-left {
   margin-right: .3em;
 }
@@ -9214,6 +9982,12 @@ ul.breadcrumb span {
   position: relative;
   top: -2px;
 }
+.file_icon:before.fa-pull-left {
+  margin-right: .3em;
+}
+.file_icon:before.fa-pull-right {
+  margin-left: .3em;
+}
 .file_icon:before.pull-left {
   margin-right: .3em;
 }
@@ -9228,8 +10002,11 @@ ul#new-menu {
   left: auto;
   right: 0;
 }
-[dir="rtl"] #new-menu {
-  text-align: right;
+#new-menu .dropdown-header {
+  font-size: 10px;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 0 0 3px;
+  margin: -3px 20px 0;
 }
 .kernel-menu-icon {
   padding-right: 12px;
@@ -9276,9 +10053,6 @@ ul#new-menu {
 #running .panel-group .panel .panel-body .list_container .list_item:last-child {
   border-bottom: 0px;
 }
-[dir="rtl"] #running .col-sm-8 {
-  float: right !important;
-}
 .delete-button {
   display: none;
 }
@@ -9286,6 +10060,12 @@ ul#new-menu {
   display: none;
 }
 .rename-button {
+  display: none;
+}
+.move-button {
+  display: none;
+}
+.download-button {
   display: none;
 }
 .shutdown-button {
@@ -9328,6 +10108,12 @@ ul#new-menu {
   -moz-osx-font-smoothing: grayscale;
   width: 20px;
 }
+.dirty-indicator.fa-pull-left {
+  margin-right: .3em;
+}
+.dirty-indicator.fa-pull-right {
+  margin-left: .3em;
+}
 .dirty-indicator.pull-left {
   margin-right: .3em;
 }
@@ -9342,6 +10128,12 @@ ul#new-menu {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   width: 20px;
+}
+.dirty-indicator-dirty.fa-pull-left {
+  margin-right: .3em;
+}
+.dirty-indicator-dirty.fa-pull-right {
+  margin-left: .3em;
 }
 .dirty-indicator-dirty.pull-left {
   margin-right: .3em;
@@ -9358,6 +10150,12 @@ ul#new-menu {
   -moz-osx-font-smoothing: grayscale;
   width: 20px;
 }
+.dirty-indicator-clean.fa-pull-left {
+  margin-right: .3em;
+}
+.dirty-indicator-clean.fa-pull-right {
+  margin-left: .3em;
+}
 .dirty-indicator-clean.pull-left {
   margin-right: .3em;
 }
@@ -9372,6 +10170,12 @@ ul#new-menu {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: "\f00c";
+}
+.dirty-indicator-clean:before.fa-pull-left {
+  margin-right: .3em;
+}
+.dirty-indicator-clean:before.fa-pull-right {
+  margin-left: .3em;
 }
 .dirty-indicator-clean:before.pull-left {
   margin-right: .3em;
@@ -9417,14 +10221,132 @@ ul#new-menu {
     box-shadow: 0px 0px 12px 1px rgba(87, 87, 87, 0.2);
   }
 }
+.CodeMirror-dialog {
+  background-color: #fff;
+}
 /*!
 *
 * IPython notebook
 *
 */
-/* CSS font colors for translated ANSI colors. */
+/* CSS font colors for translated ANSI escape sequences */
+/* The color values are a mix of
+   http://www.xcolors.net/dl/baskerville-ivorylight and
+   http://www.xcolors.net/dl/euphrasia */
+.ansi-black-fg {
+  color: #3E424D;
+}
+.ansi-black-bg {
+  background-color: #3E424D;
+}
+.ansi-black-intense-fg {
+  color: #282C36;
+}
+.ansi-black-intense-bg {
+  background-color: #282C36;
+}
+.ansi-red-fg {
+  color: #E75C58;
+}
+.ansi-red-bg {
+  background-color: #E75C58;
+}
+.ansi-red-intense-fg {
+  color: #B22B31;
+}
+.ansi-red-intense-bg {
+  background-color: #B22B31;
+}
+.ansi-green-fg {
+  color: #00A250;
+}
+.ansi-green-bg {
+  background-color: #00A250;
+}
+.ansi-green-intense-fg {
+  color: #007427;
+}
+.ansi-green-intense-bg {
+  background-color: #007427;
+}
+.ansi-yellow-fg {
+  color: #DDB62B;
+}
+.ansi-yellow-bg {
+  background-color: #DDB62B;
+}
+.ansi-yellow-intense-fg {
+  color: #B27D12;
+}
+.ansi-yellow-intense-bg {
+  background-color: #B27D12;
+}
+.ansi-blue-fg {
+  color: #208FFB;
+}
+.ansi-blue-bg {
+  background-color: #208FFB;
+}
+.ansi-blue-intense-fg {
+  color: #0065CA;
+}
+.ansi-blue-intense-bg {
+  background-color: #0065CA;
+}
+.ansi-magenta-fg {
+  color: #D160C4;
+}
+.ansi-magenta-bg {
+  background-color: #D160C4;
+}
+.ansi-magenta-intense-fg {
+  color: #A03196;
+}
+.ansi-magenta-intense-bg {
+  background-color: #A03196;
+}
+.ansi-cyan-fg {
+  color: #60C6C8;
+}
+.ansi-cyan-bg {
+  background-color: #60C6C8;
+}
+.ansi-cyan-intense-fg {
+  color: #258F8F;
+}
+.ansi-cyan-intense-bg {
+  background-color: #258F8F;
+}
+.ansi-white-fg {
+  color: #C5C1B4;
+}
+.ansi-white-bg {
+  background-color: #C5C1B4;
+}
+.ansi-white-intense-fg {
+  color: #A1A6B2;
+}
+.ansi-white-intense-bg {
+  background-color: #A1A6B2;
+}
+.ansi-default-inverse-fg {
+  color: #FFFFFF;
+}
+.ansi-default-inverse-bg {
+  background-color: #000000;
+}
+.ansi-bold {
+  font-weight: bold;
+}
+.ansi-underline {
+  text-decoration: underline;
+}
+/* The following styles are deprecated an will be removed in a future version */
 .ansibold {
   font-weight: bold;
+}
+.ansi-inverse {
+  outline: 0.5px dotted;
 }
 /* use dark versions for foreground, to improve visibility */
 .ansiblack {
@@ -9503,12 +10425,20 @@ div.cell {
   /* This acts as a spacer between cells, that is outside the border */
   margin: 0px;
   outline: none;
-  border-left-width: 1px;
-  padding-left: 5px;
-  background: linear-gradient(to right, transparent -40px, transparent 1px, transparent 1px, transparent 100%);
+  position: relative;
+  overflow: visible;
+}
+div.cell:before {
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 5px;
+  height: calc(100% +  2px);
+  content: '';
+  background: transparent;
 }
 div.cell.jupyter-soft-selected {
-  border-left-color: #90CAF9;
   border-left-color: #E3F2FD;
   border-left-width: 1px;
   padding-left: 5px;
@@ -9521,27 +10451,39 @@ div.cell.jupyter-soft-selected {
     border-color: transparent;
   }
 }
-div.cell.selected {
+div.cell.selected,
+div.cell.selected.jupyter-soft-selected {
   border-color: #ababab;
-  border-left-width: 0px;
-  padding-left: 6px;
-  background: linear-gradient(to right, #42A5F5 -40px, #42A5F5 5px, transparent 5px, transparent 100%);
+}
+div.cell.selected:before,
+div.cell.selected.jupyter-soft-selected:before {
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 5px;
+  height: calc(100% +  2px);
+  content: '';
+  background: #42A5F5;
 }
 @media print {
-  div.cell.selected {
+  div.cell.selected,
+  div.cell.selected.jupyter-soft-selected {
     border-color: transparent;
   }
 }
-div.cell.selected.jupyter-soft-selected {
-  border-left-width: 0;
-  padding-left: 6px;
-  background: linear-gradient(to right, #42A5F5 -40px, #42A5F5 7px, #E3F2FD 7px, #E3F2FD 100%);
-}
 .edit_mode div.cell.selected {
   border-color: #66BB6A;
-  border-left-width: 0px;
-  padding-left: 6px;
-  background: linear-gradient(to right, #66BB6A -40px, #66BB6A 5px, transparent 5px, transparent 100%);
+}
+.edit_mode div.cell.selected:before {
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 5px;
+  height: calc(100% +  2px);
+  content: '';
+  background: #66BB6A;
 }
 @media print {
   .edit_mode div.cell.selected {
@@ -9737,7 +10679,9 @@ div.input_area > div.highlight > pre {
 .CodeMirror-lines {
   /* In CM2, this used to be 0.4em, but in CM3 it went to 4px. We need the em value because */
   /* we have set a different line-height and want this to scale with that. */
-  padding: 0.4em;
+  /* Note that this should set vertical padding only, since CodeMirror assumes
+       that horizontal padding will be set on CodeMirror pre */
+  padding: 0.4em 0;
 }
 .CodeMirror-linenumber {
   padding: 0 8px 0 4px;
@@ -9747,11 +10691,24 @@ div.input_area > div.highlight > pre {
   border-top-left-radius: 2px;
 }
 .CodeMirror pre {
-  /* In CM3 this went to 4px from 0 in CM2. We need the 0 value because of how we size */
-  /* .CodeMirror-lines */
-  padding: 0;
+  /* In CM3 this went to 4px from 0 in CM2. This sets horizontal padding only,
+    use .CodeMirror-lines for vertical */
+  padding: 0 0.4em;
   border: 0;
   border-radius: 0;
+}
+.CodeMirror-cursor {
+  border-left: 1.4px solid black;
+}
+@media screen and (min-width: 2138px) and (max-width: 4319px) {
+  .CodeMirror-cursor {
+    border-left: 2px solid black;
+  }
+}
+@media screen and (min-width: 4320px) {
+  .CodeMirror-cursor {
+    border-left: 4px solid black;
+  }
 }
 /*
 
@@ -10005,6 +10962,9 @@ div.output_area img.unconfined,
 div.output_area svg.unconfined {
   max-width: none;
 }
+div.output_area .mglyph > img {
+  max-width: none;
+}
 /* This is needed to protect the pre formating from global settings such
    as that of bootstrap */
 .output {
@@ -10043,7 +11003,7 @@ div.output_area svg.unconfined {
 }
 div.output_area pre {
   margin: 0;
-  padding: 0;
+  padding: 1px 0 1px 0;
   border: 0;
   vertical-align: baseline;
   color: black;
@@ -10203,39 +11163,35 @@ div.output_unrecognized a:hover {
 .rendered_html h6:first-child {
   margin-top: 1em;
 }
+.rendered_html ul:not(.list-inline),
+.rendered_html ol:not(.list-inline) {
+  padding-left: 2em;
+}
 .rendered_html ul {
   list-style: disc;
-  margin: 0em 2em;
-  padding-left: 0px;
 }
 .rendered_html ul ul {
   list-style: square;
-  margin: 0em 2em;
+  margin-top: 0;
 }
 .rendered_html ul ul ul {
   list-style: circle;
-  margin: 0em 2em;
 }
 .rendered_html ol {
   list-style: decimal;
-  margin: 0em 2em;
-  padding-left: 0px;
 }
 .rendered_html ol ol {
   list-style: upper-alpha;
-  margin: 0em 2em;
+  margin-top: 0;
 }
 .rendered_html ol ol ol {
   list-style: lower-alpha;
-  margin: 0em 2em;
 }
 .rendered_html ol ol ol ol {
   list-style: lower-roman;
-  margin: 0em 2em;
 }
 .rendered_html ol ol ol ol ol {
   list-style: decimal;
-  margin: 0em 2em;
 }
 .rendered_html * + ul {
   margin-top: 1em;
@@ -10249,14 +11205,23 @@ div.output_unrecognized a:hover {
 }
 .rendered_html pre {
   margin: 1em 2em;
+  padding: 0px;
+  background-color: #fff;
+}
+.rendered_html code {
+  background-color: #eff0f1;
+}
+.rendered_html p code {
+  padding: 1px 5px;
+}
+.rendered_html pre code {
+  background-color: #fff;
 }
 .rendered_html pre,
 .rendered_html code {
   border: 0;
-  background-color: #fff;
   color: #000;
   font-size: 100%;
-  padding: 0px;
 }
 .rendered_html blockquote {
   margin: 1em 2em;
@@ -10264,24 +11229,36 @@ div.output_unrecognized a:hover {
 .rendered_html table {
   margin-left: auto;
   margin-right: auto;
-  border: 1px solid black;
+  border: none;
   border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
 }
 .rendered_html tr,
 .rendered_html th,
 .rendered_html td {
-  border: 1px solid black;
-  border-collapse: collapse;
-  margin: 1em 2em;
-}
-.rendered_html td,
-.rendered_html th {
-  text-align: left;
+  text-align: right;
   vertical-align: middle;
-  padding: 4px;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
 }
 .rendered_html th {
   font-weight: bold;
+}
+.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
 }
 .rendered_html * + table {
   margin-top: 1em;
@@ -10308,6 +11285,15 @@ div.output_unrecognized a:hover {
 .rendered_html img.unconfined,
 .rendered_html svg.unconfined {
   max-width: none;
+}
+.rendered_html .alert {
+  margin-bottom: initial;
+}
+.rendered_html * + .alert {
+  margin-top: 1em;
+}
+[dir="rtl"] .rendered_html p {
+  text-align: right;
 }
 div.text_cell {
   /* Old browsers */
@@ -10362,8 +11348,17 @@ h6:hover .anchor-link {
   overflow-x: auto;
   overflow-y: hidden;
 }
+.text_cell.rendered .rendered_html tr,
+.text_cell.rendered .rendered_html th,
+.text_cell.rendered .rendered_html td {
+  max-width: none;
+}
 .text_cell.unrendered .text_cell_render {
   display: none;
+}
+.text_cell .dropzone .input_area {
+  border: 2px dashed #bababa;
+  margin: -1px;
 }
 .cm-header-1,
 .cm-header-2,
@@ -10500,6 +11495,28 @@ kbd {
   padding-top: 1px;
   padding-bottom: 1px;
 }
+.jupyter-keybindings {
+  padding: 1px;
+  line-height: 24px;
+  border-bottom: 1px solid gray;
+}
+.jupyter-keybindings input {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+.jupyter-keybindings i {
+  padding: 6px;
+}
+.well code {
+  background-color: #ffffff;
+  border-color: #ababab;
+  border-width: 1px;
+  border-style: solid;
+  padding: 2px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
 /* CSS for the cell toolbar */
 .celltoolbar {
   border: thin solid #CFCFCF;
@@ -10632,6 +11649,152 @@ select[multiple].celltoolbar select {
   margin-left: 5px;
   margin-right: 5px;
 }
+.tags_button_container {
+  width: 100%;
+  display: flex;
+}
+.tag-container {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  overflow: hidden;
+  position: relative;
+}
+.tag-container > * {
+  margin: 0 4px;
+}
+.remove-tag-btn {
+  margin-left: 4px;
+}
+.tags-input {
+  display: flex;
+}
+.cell-tag:last-child:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 40px;
+  height: 100%;
+  /* Fade to background color of cell toolbar */
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), #EEE);
+}
+.tags-input > * {
+  margin-left: 4px;
+}
+.cell-tag,
+.tags-input input,
+.tags-input button {
+  display: block;
+  width: 100%;
+  height: 32px;
+  padding: 6px 12px;
+  font-size: 13px;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  height: 30px;
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 1px;
+  box-shadow: none;
+  width: inherit;
+  font-size: inherit;
+  height: 22px;
+  line-height: 22px;
+  padding: 0px 4px;
+  display: inline-block;
+}
+.cell-tag:focus,
+.tags-input input:focus,
+.tags-input button:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+.cell-tag::-moz-placeholder,
+.tags-input input::-moz-placeholder,
+.tags-input button::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+.cell-tag:-ms-input-placeholder,
+.tags-input input:-ms-input-placeholder,
+.tags-input button:-ms-input-placeholder {
+  color: #999;
+}
+.cell-tag::-webkit-input-placeholder,
+.tags-input input::-webkit-input-placeholder,
+.tags-input button::-webkit-input-placeholder {
+  color: #999;
+}
+.cell-tag::-ms-expand,
+.tags-input input::-ms-expand,
+.tags-input button::-ms-expand {
+  border: 0;
+  background-color: transparent;
+}
+.cell-tag[disabled],
+.tags-input input[disabled],
+.tags-input button[disabled],
+.cell-tag[readonly],
+.tags-input input[readonly],
+.tags-input button[readonly],
+fieldset[disabled] .cell-tag,
+fieldset[disabled] .tags-input input,
+fieldset[disabled] .tags-input button {
+  background-color: #eeeeee;
+  opacity: 1;
+}
+.cell-tag[disabled],
+.tags-input input[disabled],
+.tags-input button[disabled],
+fieldset[disabled] .cell-tag,
+fieldset[disabled] .tags-input input,
+fieldset[disabled] .tags-input button {
+  cursor: not-allowed;
+}
+textarea.cell-tag,
+textarea.tags-input input,
+textarea.tags-input button {
+  height: auto;
+}
+select.cell-tag,
+select.tags-input input,
+select.tags-input button {
+  height: 30px;
+  line-height: 30px;
+}
+textarea.cell-tag,
+textarea.tags-input input,
+textarea.tags-input button,
+select[multiple].cell-tag,
+select[multiple].tags-input input,
+select[multiple].tags-input button {
+  height: auto;
+}
+.cell-tag,
+.tags-input button {
+  padding: 0px 4px;
+}
+.cell-tag {
+  background-color: #fff;
+  white-space: nowrap;
+}
+.tags-input input[type=text]:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: #ccc;
+}
 .completions {
   position: absolute;
   z-index: 110;
@@ -10657,16 +11820,28 @@ select[multiple].celltoolbar select {
 .completions select option.context {
   color: #286090;
 }
-#kernel_logo_widget {
-  float: right !important;
-  float: right;
-}
 #kernel_logo_widget .current_kernel_logo {
   display: none;
   margin-top: -1px;
   margin-bottom: -1px;
   width: 32px;
   height: 32px;
+}
+[dir="rtl"] #kernel_logo_widget {
+  float: left !important;
+  float: left;
+}
+.modal .modal-body .move-path {
+  display: flex;
+  flex-direction: row;
+  justify-content: space;
+  align-items: center;
+}
+.modal .modal-body .move-path .server-root {
+  padding-right: 20px;
+}
+.modal .modal-body .move-path .path-input {
+  flex: 1;
 }
 #menubar {
   box-sizing: border-box;
@@ -10688,11 +11863,41 @@ select[multiple].celltoolbar select {
 #menubar .navbar-collapse {
   clear: left;
 }
+[dir="rtl"] #menubar .navbar-toggle {
+  float: right;
+}
+[dir="rtl"] #menubar .navbar-collapse {
+  clear: right;
+}
+[dir="rtl"] #menubar .navbar-nav {
+  float: right;
+}
+[dir="rtl"] #menubar .nav {
+  padding-right: 0px;
+}
+[dir="rtl"] #menubar .navbar-nav > li {
+  float: right;
+}
+[dir="rtl"] #menubar .navbar-right {
+  float: left !important;
+}
+[dir="rtl"] ul.dropdown-menu {
+  text-align: right;
+  left: auto;
+}
+[dir="rtl"] ul#new-menu.dropdown-menu {
+  right: auto;
+  left: 0;
+}
 .nav-wrapper {
   border-bottom: 1px solid #e7e7e7;
 }
 i.menu-icon {
   padding-top: 4px;
+}
+[dir="rtl"] i.menu-icon.pull-right {
+  float: left !important;
+  float: left;
 }
 ul#help_menu li a {
   overflow: hidden;
@@ -10700,6 +11905,17 @@ ul#help_menu li a {
 }
 ul#help_menu li a i {
   margin-right: -1.2em;
+}
+[dir="rtl"] ul#help_menu li a {
+  padding-left: 2.2em;
+}
+[dir="rtl"] ul#help_menu li a i {
+  margin-right: 0;
+  margin-left: -1.2em;
+}
+[dir="rtl"] ul#help_menu li a i.pull-right {
+  float: left !important;
+  float: left;
 }
 .dropdown-submenu {
   position: relative;
@@ -10709,6 +11925,10 @@ ul#help_menu li a i {
   left: 100%;
   margin-top: -6px;
   margin-left: -1px;
+}
+[dir="rtl"] .dropdown-submenu > .dropdown-menu {
+  right: 100%;
+  margin-right: -1px;
 }
 .dropdown-submenu:hover > .dropdown-menu {
   display: block;
@@ -10727,11 +11947,23 @@ ul#help_menu li a i {
   margin-top: 2px;
   margin-right: -10px;
 }
+.dropdown-submenu > a:after.fa-pull-left {
+  margin-right: .3em;
+}
+.dropdown-submenu > a:after.fa-pull-right {
+  margin-left: .3em;
+}
 .dropdown-submenu > a:after.pull-left {
   margin-right: .3em;
 }
 .dropdown-submenu > a:after.pull-right {
   margin-left: .3em;
+}
+[dir="rtl"] .dropdown-submenu > a:after {
+  float: left;
+  content: "\f0d9";
+  margin-right: 0;
+  margin-left: -10px;
 }
 .dropdown-submenu:hover > a:after {
   color: #262626;
@@ -10748,6 +11980,10 @@ ul#help_menu li a i {
   float: right;
   z-index: 10;
 }
+[dir="rtl"] #notification_area {
+  float: left !important;
+  float: left;
+}
 .indicator_area {
   float: right !important;
   float: right;
@@ -10758,6 +11994,10 @@ ul#help_menu li a i {
   z-index: 10;
   text-align: center;
   width: auto;
+}
+[dir="rtl"] .indicator_area {
+  float: left !important;
+  float: left;
 }
 #kernel_indicator {
   float: right !important;
@@ -10775,6 +12015,12 @@ ul#help_menu li a i {
   padding-left: 5px;
   padding-right: 5px;
 }
+[dir="rtl"] #kernel_indicator {
+  float: left !important;
+  float: left;
+  border-left: 0;
+  border-right: 1px solid;
+}
 #modal_indicator {
   float: right !important;
   float: right;
@@ -10785,6 +12031,10 @@ ul#help_menu li a i {
   z-index: 10;
   text-align: center;
   width: auto;
+}
+[dir="rtl"] #modal_indicator {
+  float: left !important;
+  float: left;
 }
 #readonly-indicator {
   float: right !important;
@@ -10815,6 +12065,12 @@ ul#help_menu li a i {
   -moz-osx-font-smoothing: grayscale;
   content: "\f040";
 }
+.edit_mode .modal_indicator:before.fa-pull-left {
+  margin-right: .3em;
+}
+.edit_mode .modal_indicator:before.fa-pull-right {
+  margin-left: .3em;
+}
 .edit_mode .modal_indicator:before.pull-left {
   margin-right: .3em;
 }
@@ -10829,6 +12085,12 @@ ul#help_menu li a i {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: ' ';
+}
+.command_mode .modal_indicator:before.fa-pull-left {
+  margin-right: .3em;
+}
+.command_mode .modal_indicator:before.fa-pull-right {
+  margin-left: .3em;
 }
 .command_mode .modal_indicator:before.pull-left {
   margin-right: .3em;
@@ -10845,6 +12107,12 @@ ul#help_menu li a i {
   -moz-osx-font-smoothing: grayscale;
   content: "\f10c";
 }
+.kernel_idle_icon:before.fa-pull-left {
+  margin-right: .3em;
+}
+.kernel_idle_icon:before.fa-pull-right {
+  margin-left: .3em;
+}
 .kernel_idle_icon:before.pull-left {
   margin-right: .3em;
 }
@@ -10859,6 +12127,12 @@ ul#help_menu li a i {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: "\f111";
+}
+.kernel_busy_icon:before.fa-pull-left {
+  margin-right: .3em;
+}
+.kernel_busy_icon:before.fa-pull-right {
+  margin-left: .3em;
 }
 .kernel_busy_icon:before.pull-left {
   margin-right: .3em;
@@ -10875,6 +12149,12 @@ ul#help_menu li a i {
   -moz-osx-font-smoothing: grayscale;
   content: "\f1e2";
 }
+.kernel_dead_icon:before.fa-pull-left {
+  margin-right: .3em;
+}
+.kernel_dead_icon:before.fa-pull-right {
+  margin-left: .3em;
+}
 .kernel_dead_icon:before.pull-left {
   margin-right: .3em;
 }
@@ -10889,6 +12169,12 @@ ul#help_menu li a i {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: "\f127";
+}
+.kernel_disconnected_icon:before.fa-pull-left {
+  margin-right: .3em;
+}
+.kernel_disconnected_icon:before.fa-pull-right {
+  margin-left: .3em;
 }
 .kernel_disconnected_icon:before.pull-left {
   margin-right: .3em;
@@ -11279,27 +12565,46 @@ div#pager .ui-resizable-handle::after {
   flex: 1;
 }
 span.save_widget {
-  margin-top: 6px;
+  height: 30px;
+  margin-top: 4px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  width: 50%;
+  flex: 1;
 }
 span.save_widget span.filename {
-  height: 1em;
+  height: 100%;
   line-height: 1em;
-  padding: 3px;
   margin-left: 16px;
   border: none;
   font-size: 146.5%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
   border-radius: 2px;
 }
 span.save_widget span.filename:hover {
   background-color: #e6e6e6;
 }
+[dir="rtl"] span.save_widget.pull-left {
+  float: right !important;
+  float: right;
+}
+[dir="rtl"] span.save_widget span.filename {
+  margin-left: 0;
+  margin-right: 16px;
+}
 span.checkpoint_status,
 span.autosave_status {
   font-size: small;
+  white-space: nowrap;
+  padding: 0 5px;
 }
 @media (max-width: 767px) {
   span.save_widget {
     font-size: small;
+    padding: 0 0 0 5px;
   }
   span.checkpoint_status,
   span.autosave_status {
@@ -11343,6 +12648,9 @@ span.autosave_status {
   margin-top: 0px;
   margin-left: 5px;
 }
+.toolbar-btn-label {
+  margin-left: 6px;
+}
 #maintoolbar {
   margin-bottom: -3px;
   margin-top: -8px;
@@ -11362,6 +12670,10 @@ span.autosave_status {
 }
 .select-xs {
   height: 24px;
+}
+[dir="rtl"] .btn-group > .btn,
+.btn-group-vertical > .btn {
+  float: right;
 }
 .pulse,
 .dropdown-menu > li > a.pulse,
@@ -11512,6 +12824,10 @@ ul.typeahead-list i {
   margin-left: -10px;
   width: 18px;
 }
+[dir="rtl"] ul.typeahead-list i {
+  margin-left: 0;
+  margin-right: -10px;
+}
 ul.typeahead-list {
   max-height: 80vh;
   overflow: auto;
@@ -11520,6 +12836,13 @@ ul.typeahead-list > li > a {
   /** Firefox bug **/
   /* see https://github.com/jupyter/notebook/issues/559 */
   white-space: normal;
+}
+ul.typeahead-list  > li > a.pull-right {
+  float: left !important;
+  float: left;
+}
+[dir="rtl"] .typeahead-list {
+  text-align: right;
 }
 .cmd-palette .modal-body {
   padding: 7px;
@@ -11531,10 +12854,19 @@ ul.typeahead-list > li > a {
   outline: none;
 }
 .no-shortcut {
-  display: none;
+  min-width: 20px;
+  color: transparent;
+}
+[dir="rtl"] .no-shortcut.pull-right {
+  float: left !important;
+  float: left;
+}
+[dir="rtl"] .command-shortcut.pull-right {
+  float: left !important;
+  float: left;
 }
 .command-shortcut:before {
-  content: "(command)";
+  content: "(command mode)";
   padding-right: 3px;
   color: #777777;
 }
@@ -11543,6 +12875,10 @@ ul.typeahead-list > li > a {
   padding-right: 3px;
   color: #777777;
 }
+[dir="rtl"] .edit-shortcut.pull-right {
+  float: left !important;
+  float: left;
+}
 #find-and-replace #replace-preview .match,
 #find-and-replace #replace-preview .insert {
   background-color: #BBDEFB;
@@ -11550,6 +12886,12 @@ ul.typeahead-list > li > a {
   border-style: solid;
   border-width: 1px;
   border-radius: 0px;
+}
+[dir="ltr"] #find-and-replace .input-group-btn + .form-control {
+  border-left: none;
+}
+[dir="rtl"] #find-and-replace .input-group-btn + .form-control {
+  border-right: none;
 }
 #find-and-replace #replace-preview .replace .match {
   background-color: #FFCDD2;
@@ -11726,9 +13068,7 @@ body {
 div#notebook {
   overflow: visible;
   border-top: none;
-}
-
-@media print {
+}@media print {
   div.cell {
     display: block;
     page-break-inside: avoid;
@@ -11749,7 +13089,7 @@ div#notebook {
 
 <!-- Loading mathjax macro -->
 <!-- Load mathjax -->
-    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML"></script>
     <!-- MathJax configuration -->
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -11773,10 +13113,8 @@ div#notebook {
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Artificial-Intelligence-Nanodegree">Artificial Intelligence Nanodegree<a class="anchor-link" href="#Artificial-Intelligence-Nanodegree">&#182;</a></h1><h2 id="Convolutional-Neural-Networks">Convolutional Neural Networks<a class="anchor-link" href="#Convolutional-Neural-Networks">&#182;</a></h2><h2 id="Project:-Write-an-Algorithm-for-a-Dog-Identification-App">Project: Write an Algorithm for a Dog Identification App<a class="anchor-link" href="#Project:-Write-an-Algorithm-for-a-Dog-Identification-App">&#182;</a></h2><hr>
 <p>In this notebook, some template code has already been provided for you, and you will need to implement additional functionality to successfully complete this project. You will not need to modify the included code beyond what is requested. Sections that begin with <strong>'(IMPLEMENTATION)'</strong> in the header indicate that the following block of code will require additional functionality which you must provide. Instructions will be provided for each section, and the specifics of the implementation are marked in the code block with a 'TODO' statement. Please be sure to read the instructions carefully!</p>
@@ -11847,7 +13185,7 @@ div#notebook {
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;There are </span><span class="si">%d</span><span class="s1"> test dog images.&#39;</span><span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">test_files</span><span class="p">))</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -11856,7 +13194,9 @@ div#notebook {
 
 
 <div class="output_area">
-<div class="prompt"></div>
+
+    <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>There are 133 total dog categories.
@@ -11881,15 +13221,13 @@ There are 836 test dog images.
 <div class=" highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Import-Human-Dataset">Import Human Dataset<a class="anchor-link" href="#Import-Human-Dataset">&#182;</a></h3><p>In the code cell below, we import a dataset of human images, where the file paths are stored in the numpy array <code>human_files</code>.</p>
 
@@ -11912,7 +13250,7 @@ There are 836 test dog images.
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;There are </span><span class="si">%d</span><span class="s1"> total human images.&#39;</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">human_files</span><span class="p">))</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -11921,7 +13259,9 @@ There are 836 test dog images.
 
 
 <div class="output_area">
-<div class="prompt"></div>
+
+    <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>There are 13233 total human images.
@@ -11933,10 +13273,8 @@ There are 836 test dog images.
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
 <p><a id='step1'></a></p>
@@ -11982,7 +13320,7 @@ There are 836 test dog images.
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -11991,7 +13329,9 @@ There are 836 test dog images.
 
 
 <div class="output_area">
-<div class="prompt"></div>
+
+    <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Number of faces detected: 1
@@ -12000,7 +13340,9 @@ There are 836 test dog images.
 </div>
 
 <div class="output_area">
-<div class="prompt"></div>
+
+    <div class="prompt"></div>
+
 
 
 
@@ -13153,10 +14495,8 @@ a7iGZ4JrZnEN13ANzwTXzOIaruEangmumcU1XMM1PBNcM4truIZreCa4ZhbXcA3X8Ezw/wGRo8GQ
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Before using any of the face detectors, it is standard procedure to convert the images to grayscale.  The <code>detectMultiScale</code> function executes the classifier stored in <code>face_cascade</code> and takes the grayscale image as a parameter.</p>
 <p>In the above code, <code>faces</code> is a numpy array of detected faces, where each row corresponds to a detected face.  Each detected face is a 1D array with four entries that specifies the bounding box of the detected face.  The first two entries in the array (extracted in the above code as <code>x</code> and <code>y</code>) specify the horizontal and vertical positions of the top left corner of the bounding box.  The last two entries in the array (extracted here as <code>w</code> and <code>h</code>) specify the width and height of the box.</p>
@@ -13178,15 +14518,13 @@ a7iGZ4JrZnEN13ANzwTXzOIaruEangmumcU1XMM1PBNcM4truIZreCa4ZhbXcA3X8Ezw/wGRo8GQ
     <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">faces</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="(IMPLEMENTATION)-Assess-the-Human-Face-Detector">(IMPLEMENTATION) Assess the Human Face Detector<a class="anchor-link" href="#(IMPLEMENTATION)-Assess-the-Human-Face-Detector">&#182;</a></h3><p><strong>Question 1:</strong> Use the code cell below to test the performance of the <code>face_detector</code> function.</p>
 <ul>
@@ -13194,7 +14532,9 @@ a7iGZ4JrZnEN13ANzwTXzOIaruEangmumcU1XMM1PBNcM4truIZreCa4ZhbXcA3X8Ezw/wGRo8GQ
 <li>What percentage of the first 100 images in <code>dog_files</code> have a detected human face? </li>
 </ul>
 <p>Ideally, we would like 100% of human images with a detected face and 0% of dog images with a detected face.  You will see that our algorithm falls short of this goal, but still gives acceptable performance.  We extract the file paths for the first 100 images from each of the datasets and store them in the numpy arrays <code>human_files_short</code> and <code>dog_files_short</code>.</p>
-<p><strong>Answer:</strong></p>
+<p>Answer: Using haarcascades face detector:</p>
+<p>Detected human faces in the first 100 human images: 96%</p>
+<p>Detected faces in the first 100 dogs images: 16%</p>
 
 </div>
 </div>
@@ -13226,15 +14566,13 @@ a7iGZ4JrZnEN13ANzwTXzOIaruEangmumcU1XMM1PBNcM4truIZreCa4ZhbXcA3X8Ezw/wGRo8GQ
     
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Question 2:</strong> This algorithmic choice necessitates that we communicate to the user that we accept human images only when they provide a clear view of a face (otherwise, we risk having unneccessarily frustrated users!). In your opinion, is this a reasonable expectation to pose on the user? If not, can you think of a way to detect humans in images that does not necessitate an image with a clearly presented face?</p>
 <p><strong>Answer:</strong></p>
@@ -13257,7 +14595,7 @@ a7iGZ4JrZnEN13ANzwTXzOIaruEangmumcU1XMM1PBNcM4truIZreCa4ZhbXcA3X8Ezw/wGRo8GQ
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%2.2f</span><span class="s2"> percent of dog files has been detected as face.&quot;</span><span class="o">%</span><span class="p">(</span><span class="n">dog_results</span><span class="p">))</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -13266,7 +14604,9 @@ a7iGZ4JrZnEN13ANzwTXzOIaruEangmumcU1XMM1PBNcM4truIZreCa4ZhbXcA3X8Ezw/wGRo8GQ
 
 
 <div class="output_area">
-<div class="prompt"></div>
+
+    <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>99.00 percent of human files has been detected as face.
@@ -13279,10 +14619,8 @@ a7iGZ4JrZnEN13ANzwTXzOIaruEangmumcU1XMM1PBNcM4truIZreCa4ZhbXcA3X8Ezw/wGRo8GQ
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
 <p><a id='step2'></a></p>
@@ -13302,15 +14640,13 @@ a7iGZ4JrZnEN13ANzwTXzOIaruEangmumcU1XMM1PBNcM4truIZreCa4ZhbXcA3X8Ezw/wGRo8GQ
 <span class="n">ResNet50_model</span> <span class="o">=</span> <span class="n">ResNet50</span><span class="p">(</span><span class="n">weights</span><span class="o">=</span><span class="s1">&#39;imagenet&#39;</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Pre-process-the-Data">Pre-process the Data<a class="anchor-link" href="#Pre-process-the-Data">&#182;</a></h3><p>When using TensorFlow as backend, Keras CNNs require a 4D array (which we'll also refer to as a 4D tensor) as input, with shape</p>
 $$
@@ -13348,15 +14684,13 @@ $$<p>Here, <code>nb_samples</code> is the number of samples, or number of images
     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">(</span><span class="n">list_of_tensors</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Making-Predictions-with-ResNet-50">Making Predictions with ResNet-50<a class="anchor-link" href="#Making-Predictions-with-ResNet-50">&#182;</a></h3><p>Getting the 4D tensor ready for ResNet-50, and for any other pre-trained model in Keras, requires some additional processing.  First, the RGB image is converted to BGR by reordering the channels.  All pre-trained models have the additional normalization step that the mean pixel (expressed in RGB as $[103.939, 116.779, 123.68]$ and calculated from all pixels in all images in ImageNet) must be subtracted from every pixel in each image.  This is implemented in the imported function <code>preprocess_input</code>.  If you're curious, you can check the code for <code>preprocess_input</code> <a href="https://github.com/fchollet/keras/blob/master/keras/applications/imagenet_utils.py">here</a>.</p>
 <p>Now that we have a way to format our image for supplying to ResNet-50, we are now ready to use the model to extract the predictions.  This is accomplished with the <code>predict</code> method, which returns an array whose $i$-th entry is the model's predicted probability that the image belongs to the $i$-th ImageNet category.  This is implemented in the <code>ResNet50_predict_labels</code> function below.</p>
@@ -13378,15 +14712,13 @@ $$<p>Here, <code>nb_samples</code> is the number of samples, or number of images
     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">ResNet50_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">img</span><span class="p">))</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Write-a-Dog-Detector">Write a Dog Detector<a class="anchor-link" href="#Write-a-Dog-Detector">&#182;</a></h3><p>While looking at the <a href="https://gist.github.com/yrevar/942d3a0ac09ec9e5eb3a">dictionary</a>, you will notice that the categories corresponding to dogs appear in an uninterrupted sequence and correspond to dictionary keys 151-268, inclusive, to include all categories from <code>'Chihuahua'</code> to <code>'Mexican hairless'</code>.  Thus, in order to check to see if an image is predicted to contain a dog by the pre-trained ResNet-50 model, we need only check if the <code>ResNet50_predict_labels</code> function above returns a value between 151 and 268 (inclusive).</p>
 <p>We use these ideas to complete the <code>dog_detector</code> function below, which returns <code>True</code> if a dog is detected in an image (and <code>False</code> if not).</p>
@@ -13405,22 +14737,23 @@ $$<p>Here, <code>nb_samples</code> is the number of samples, or number of images
     <span class="k">return</span> <span class="p">((</span><span class="n">prediction</span> <span class="o">&lt;=</span> <span class="mi">268</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">prediction</span> <span class="o">&gt;=</span> <span class="mi">151</span><span class="p">))</span> 
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="(IMPLEMENTATION)-Assess-the-Dog-Detector">(IMPLEMENTATION) Assess the Dog Detector<a class="anchor-link" href="#(IMPLEMENTATION)-Assess-the-Dog-Detector">&#182;</a></h3><p><strong>Question 3:</strong> Use the code cell below to test the performance of your <code>dog_detector</code> function.</p>
 <ul>
 <li>What percentage of the images in <code>human_files_short</code> have a detected dog?  </li>
 <li>What percentage of the images in <code>dog_files_short</code> have a detected dog?</li>
 </ul>
-<p><strong>Answer:</strong></p>
+<p><strong>Answer:</strong> 
+Using haarcascades face detector:</p>
+<p>Detected human faces in the first 100 human images: 96%</p>
+<p>Detected faces in the first 100 dogs images: 16%</p>
 
 </div>
 </div>
@@ -13456,7 +14789,7 @@ $$<p>Here, <code>nb_samples</code> is the number of samples, or number of images
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%2.2f</span><span class="s2"> percent of dog files are detected as dogs.&quot;</span><span class="o">%</span><span class="p">(</span><span class="n">dog_percent</span><span class="p">))</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -13465,7 +14798,9 @@ $$<p>Here, <code>nb_samples</code> is the number of samples, or number of images
 
 
 <div class="output_area">
-<div class="prompt"></div>
+
+    <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>1.00 percent of human faces are detected as dops.
@@ -13478,10 +14813,8 @@ $$<p>Here, <code>nb_samples</code> is the number of samples, or number of images
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
 <p><a id='step3'></a></p>
@@ -13552,7 +14885,7 @@ $$<p>Here, <code>nb_samples</code> is the number of samples, or number of images
 <span class="n">test_tensors</span> <span class="o">=</span> <span class="n">paths_to_tensor</span><span class="p">(</span><span class="n">test_files</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;float32&#39;</span><span class="p">)</span><span class="o">/</span><span class="mi">255</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -13561,7 +14894,9 @@ $$<p>Here, <code>nb_samples</code> is the number of samples, or number of images
 
 
 <div class="output_area">
-<div class="prompt"></div>
+
+    <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>100%|██████████████████████████████████████████████████████████████████████████████| 6680/6680 [10:32&lt;00:00, 12.05it/s]
@@ -13575,10 +14910,8 @@ $$<p>Here, <code>nb_samples</code> is the number of samples, or number of images
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="(IMPLEMENTATION)-Model-Architecture">(IMPLEMENTATION) Model Architecture<a class="anchor-link" href="#(IMPLEMENTATION)-Model-Architecture">&#182;</a></h3><p>Create a CNN to classify dog breed.  At the end of your code cell block, summarize the layers of your model by executing the line:</p>
 
@@ -13588,7 +14921,11 @@ $$<p>Here, <code>nb_samples</code> is the number of samples, or number of images
 <p>We have imported some Python modules to get you started, but feel free to import as many modules as you need.  If you end up getting stuck, here's a hint that specifies a model that trains relatively fast on CPU and attains &gt;1% test accuracy in 5 epochs:</p>
 <p><img src="images/sample_cnn.png" alt="Sample CNN"></p>
 <p><strong>Question 4:</strong> Outline the steps you took to get to your final CNN architecture and your reasoning at each step.  If you chose to use the hinted architecture above, describe why you think that CNN architecture should work well for the image classification task.</p>
-<p><strong>Answer:</strong></p>
+<p>Answer:
+Training, Testing and Validation data are loaded into the dataset first.
+Then, image files are cropped into 224 x 224 with centered in face (haar face detection).
+Then, 3 dimension images are converted to grayscale.
+After that, face_detector is applied for face detection and Rosenet50 is applied for dog classification. For classification of two species, we need to implement 2 algorithms and its accuracy is not good. hence we need CNN to implement the image classification.</p>
 
 </div>
 </div>
@@ -13622,7 +14959,7 @@ $$<p>Here, <code>nb_samples</code> is the number of samples, or number of images
 <span class="n">model</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -13631,7 +14968,9 @@ $$<p>Here, <code>nb_samples</code> is the number of samples, or number of images
 
 
 <div class="output_area">
-<div class="prompt"></div>
+
+    <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>_________________________________________________________________
@@ -13678,10 +15017,8 @@ _________________________________________________________________
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Compile-the-Model">Compile the Model<a class="anchor-link" href="#Compile-the-Model">&#182;</a></h3>
 </div>
@@ -13695,15 +15032,13 @@ _________________________________________________________________
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">optimizer</span><span class="o">=</span><span class="s1">&#39;rmsprop&#39;</span><span class="p">,</span> <span class="n">loss</span><span class="o">=</span><span class="s1">&#39;categorical_crossentropy&#39;</span><span class="p">,</span> <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;accuracy&#39;</span><span class="p">])</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="(IMPLEMENTATION)-Train-the-Model">(IMPLEMENTATION) Train the Model<a class="anchor-link" href="#(IMPLEMENTATION)-Train-the-Model">&#182;</a></h3><p>Train your model in the code cell below.  Use model checkpointing to save the model that attains the best validation loss.</p>
 <p>You are welcome to <a href="https://blog.keras.io/building-powerful-image-classification-models-using-very-little-data.html">augment the training data</a>, but this is not a requirement.</p>
@@ -13733,7 +15068,7 @@ _________________________________________________________________
           <span class="n">epochs</span><span class="o">=</span><span class="n">epochs</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">callbacks</span><span class="o">=</span><span class="p">[</span><span class="n">checkpointer</span><span class="p">],</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -13742,12 +15077,14 @@ _________________________________________________________________
 
 
 <div class="output_area">
-<div class="prompt"></div>
+
+    <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Train on 6680 samples, validate on 835 samples
 Epoch 1/5
-4040/6680 [=================&gt;............] - ETA: 4963s - loss: 5.0155 - acc: 0.0000e+ - ETA: 2833s - loss: 9.4772 - acc: 0.0000e+ - ETA: 2144s - loss: 10.4942 - acc: 0.0000e+0 - ETA: 1789s - loss: 9.4592 - acc: 0.0000e+0 - ETA: 1553s - loss: 8.5979 - acc: 0.0000e+ - ETA: 1416s - loss: 8.0157 - acc: 0.0000e+ - ETA: 1316s - loss: 7.6423 - acc: 0.0000e+ - ETA: 1244s - loss: 7.3108 - acc: 0.0000e+ - ETA: 1177s - loss: 7.0551 - acc: 0.0056   - ETA: 1121s - loss: 6.8547 - acc: 0.00 - ETA: 1080s - loss: 6.6842 - acc: 0.00 - ETA: 1063s - loss: 6.5412 - acc: 0.00 - ETA: 1039s - loss: 6.4150 - acc: 0.00 - ETA: 1014s - loss: 6.3020 - acc: 0.00 - ETA: 997s - loss: 6.2097 - acc: 0.0033 - ETA: 977s - loss: 6.1308 - acc: 0.003 - ETA: 957s - loss: 6.0580 - acc: 0.005 - ETA: 941s - loss: 5.9905 - acc: 0.005 - ETA: 929s - loss: 5.9326 - acc: 0.007 - ETA: 918s - loss: 5.8806 - acc: 0.007 - ETA: 911s - loss: 5.8349 - acc: 0.007 - ETA: 899s - loss: 5.7928 - acc: 0.006 - ETA: 886s - loss: 5.7530 - acc: 0.006 - ETA: 875s - loss: 5.7183 - acc: 0.006 - ETA: 865s - loss: 5.6847 - acc: 0.006 - ETA: 855s - loss: 5.6547 - acc: 0.007 - ETA: 853s - loss: 5.6260 - acc: 0.007 - ETA: 849s - loss: 5.5987 - acc: 0.008 - ETA: 853s - loss: 5.5730 - acc: 0.008 - ETA: 844s - loss: 5.5500 - acc: 0.008 - ETA: 839s - loss: 5.5281 - acc: 0.008 - ETA: 832s - loss: 5.5061 - acc: 0.007 - ETA: 827s - loss: 5.4864 - acc: 0.009 - ETA: 828s - loss: 5.4714 - acc: 0.010 - ETA: 827s - loss: 5.4546 - acc: 0.010 - ETA: 821s - loss: 5.4380 - acc: 0.009 - ETA: 813s - loss: 5.4225 - acc: 0.009 - ETA: 809s - loss: 5.4090 - acc: 0.009 - ETA: 802s - loss: 5.3967 - acc: 0.009 - ETA: 795s - loss: 5.3841 - acc: 0.008 - ETA: 789s - loss: 5.3720 - acc: 0.008 - ETA: 784s - loss: 5.3609 - acc: 0.008 - ETA: 784s - loss: 5.3501 - acc: 0.008 - ETA: 786s - loss: 5.3397 - acc: 0.008 - ETA: 782s - loss: 5.3296 - acc: 0.007 - ETA: 776s - loss: 5.3198 - acc: 0.007 - ETA: 771s - loss: 5.3107 - acc: 0.008 - ETA: 768s - loss: 5.3019 - acc: 0.008 - ETA: 762s - loss: 5.2937 - acc: 0.008 - ETA: 757s - loss: 5.2856 - acc: 0.008 - ETA: 752s - loss: 5.2778 - acc: 0.008 - ETA: 748s - loss: 5.2702 - acc: 0.009 - ETA: 743s - loss: 5.2628 - acc: 0.009 - ETA: 738s - loss: 5.2566 - acc: 0.009 - ETA: 739s - loss: 5.2502 - acc: 0.009 - ETA: 735s - loss: 5.2437 - acc: 0.008 - ETA: 730s - loss: 5.2374 - acc: 0.008 - ETA: 725s - loss: 5.2313 - acc: 0.008 - ETA: 727s - loss: 5.2260 - acc: 0.008 - ETA: 732s - loss: 5.2202 - acc: 0.008 - ETA: 729s - loss: 5.2146 - acc: 0.008 - ETA: 725s - loss: 5.2092 - acc: 0.008 - ETA: 724s - loss: 5.2036 - acc: 0.007 - ETA: 721s - loss: 5.1983 - acc: 0.008 - ETA: 716s - loss: 5.1922 - acc: 0.008 - ETA: 716s - loss: 5.1893 - acc: 0.009 - ETA: 713s - loss: 5.1852 - acc: 0.009 - ETA: 710s - loss: 5.1812 - acc: 0.008 - ETA: 709s - loss: 5.1764 - acc: 0.009 - ETA: 707s - loss: 5.1719 - acc: 0.009 - ETA: 708s - loss: 5.1671 - acc: 0.009 - ETA: 704s - loss: 5.1631 - acc: 0.009 - ETA: 700s - loss: 5.1594 - acc: 0.008 - ETA: 696s - loss: 5.1554 - acc: 0.008 - ETA: 693s - loss: 5.1541 - acc: 0.008 - ETA: 693s - loss: 5.1497 - acc: 0.008 - ETA: 690s - loss: 5.1457 - acc: 0.009 - ETA: 685s - loss: 5.1420 - acc: 0.009 - ETA: 683s - loss: 5.1376 - acc: 0.008 - ETA: 681s - loss: 5.1346 - acc: 0.008 - ETA: 680s - loss: 5.1325 - acc: 0.008 - ETA: 677s - loss: 5.1293 - acc: 0.008 - ETA: 676s - loss: 5.1269 - acc: 0.008 - ETA: 673s - loss: 5.1238 - acc: 0.008 - ETA: 671s - loss: 5.1212 - acc: 0.008 - ETA: 666s - loss: 5.1178 - acc: 0.009 - ETA: 666s - loss: 5.1150 - acc: 0.009 - ETA: 664s - loss: 5.1121 - acc: 0.009 - ETA: 662s - loss: 5.1105 - acc: 0.009 - ETA: 661s - loss: 5.1076 - acc: 0.009 - ETA: 657s - loss: 5.1050 - acc: 0.009 - ETA: 656s - loss: 5.1032 - acc: 0.009 - ETA: 652s - loss: 5.1004 - acc: 0.010 - ETA: 649s - loss: 5.0985 - acc: 0.010 - ETA: 645s - loss: 5.0963 - acc: 0.010 - ETA: 642s - loss: 5.0942 - acc: 0.010 - ETA: 639s - loss: 5.0918 - acc: 0.010 - ETA: 637s - loss: 5.0899 - acc: 0.010 - ETA: 637s - loss: 5.0873 - acc: 0.010 - ETA: 633s - loss: 5.0850 - acc: 0.010 - ETA: 631s - loss: 5.0831 - acc: 0.010 - ETA: 629s - loss: 5.0813 - acc: 0.010 - ETA: 627s - loss: 5.0796 - acc: 0.010 - ETA: 626s - loss: 5.0776 - acc: 0.010 - ETA: 623s - loss: 5.0757 - acc: 0.010 - ETA: 623s - loss: 5.0737 - acc: 0.010 - ETA: 621s - loss: 5.0724 - acc: 0.010 - ETA: 617s - loss: 5.0705 - acc: 0.010 - ETA: 616s - loss: 5.0685 - acc: 0.010 - ETA: 614s - loss: 5.0670 - acc: 0.010 - ETA: 613s - loss: 5.0654 - acc: 0.010 - ETA: 610s - loss: 5.0639 - acc: 0.010 - ETA: 609s - loss: 5.0619 - acc: 0.010 - ETA: 610s - loss: 5.0599 - acc: 0.010 - ETA: 610s - loss: 5.0615 - acc: 0.010 - ETA: 608s - loss: 5.0597 - acc: 0.010 - ETA: 607s - loss: 5.0576 - acc: 0.010 - ETA: 603s - loss: 5.0564 - acc: 0.010 - ETA: 603s - loss: 5.0550 - acc: 0.010 - ETA: 601s - loss: 5.0533 - acc: 0.010 - ETA: 601s - loss: 5.0522 - acc: 0.010 - ETA: 597s - loss: 5.0505 - acc: 0.010 - ETA: 593s - loss: 5.0488 - acc: 0.010 - ETA: 589s - loss: 5.0478 - acc: 0.010 - ETA: 587s - loss: 5.0461 - acc: 0.010 - ETA: 585s - loss: 5.0446 - acc: 0.010 - ETA: 581s - loss: 5.0427 - acc: 0.010 - ETA: 579s - loss: 5.0421 - acc: 0.010 - ETA: 576s - loss: 5.0405 - acc: 0.010 - ETA: 572s - loss: 5.0396 - acc: 0.010 - ETA: 569s - loss: 5.0388 - acc: 0.010 - ETA: 566s - loss: 5.0381 - acc: 0.010 - ETA: 562s - loss: 5.0369 - acc: 0.010 - ETA: 559s - loss: 5.0357 - acc: 0.010 - ETA: 556s - loss: 5.0346 - acc: 0.010 - ETA: 552s - loss: 5.0336 - acc: 0.009 - ETA: 549s - loss: 5.0324 - acc: 0.009 - ETA: 546s - loss: 5.0316 - acc: 0.009 - ETA: 542s - loss: 5.0303 - acc: 0.010 - ETA: 540s - loss: 5.0291 - acc: 0.010 - ETA: 537s - loss: 5.0278 - acc: 0.010 - ETA: 533s - loss: 5.0267 - acc: 0.010 - ETA: 532s - loss: 5.0258 - acc: 0.010 - ETA: 529s - loss: 5.0245 - acc: 0.010 - ETA: 526s - loss: 5.0234 - acc: 0.010 - ETA: 523s - loss: 5.0225 - acc: 0.010 - ETA: 521s - loss: 5.0217 - acc: 0.010 - ETA: 517s - loss: 5.0205 - acc: 0.010 - ETA: 515s - loss: 5.0197 - acc: 0.010 - ETA: 512s - loss: 5.0187 - acc: 0.010 - ETA: 508s - loss: 5.0178 - acc: 0.010 - ETA: 506s - loss: 5.0168 - acc: 0.010 - ETA: 503s - loss: 5.0157 - acc: 0.010 - ETA: 501s - loss: 5.0152 - acc: 0.010 - ETA: 498s - loss: 5.0146 - acc: 0.010 - ETA: 497s - loss: 5.0138 - acc: 0.009 - ETA: 493s - loss: 5.0127 - acc: 0.010 - ETA: 490s - loss: 5.0120 - acc: 0.010 - ETA: 487s - loss: 5.0111 - acc: 0.010 - ETA: 484s - loss: 5.0101 - acc: 0.010 - ETA: 482s - loss: 5.0095 - acc: 0.010 - ETA: 479s - loss: 5.0084 - acc: 0.010 - ETA: 476s - loss: 5.0071 - acc: 0.010 - ETA: 473s - loss: 5.0058 - acc: 0.010 - ETA: 470s - loss: 5.0052 - acc: 0.010 - ETA: 467s - loss: 5.0037 - acc: 0.010 - ETA: 464s - loss: 5.0038 - acc: 0.010 - ETA: 462s - loss: 5.0030 - acc: 0.010 - ETA: 460s - loss: 5.0018 - acc: 0.010 - ETA: 457s - loss: 5.0010 - acc: 0.010 - ETA: 453s - loss: 5.0009 - acc: 0.010 - ETA: 451s - loss: 5.0004 - acc: 0.010 - ETA: 449s - loss: 4.9988 - acc: 0.010 - ETA: 446s - loss: 4.9977 - acc: 0.010 - ETA: 444s - loss: 4.9966 - acc: 0.011 - ETA: 441s - loss: 4.9961 - acc: 0.011 - ETA: 438s - loss: 4.9952 - acc: 0.011 - ETA: 435s - loss: 4.9949 - acc: 0.011 - ETA: 433s - loss: 4.9942 - acc: 0.010 - ETA: 430s - loss: 4.9935 - acc: 0.010 - ETA: 427s - loss: 4.9926 - acc: 0.011 - ETA: 424s - loss: 4.9919 - acc: 0.011 - ETA: 422s - loss: 4.9910 - acc: 0.010 - ETA: 419s - loss: 4.9908 - acc: 0.011 - ETA: 416s - loss: 4.9901 - acc: 0.011 - ETA: 413s - loss: 4.9892 - acc: 0.011 - ETA: 411s - loss: 4.9884 - acc: 0.011 - ETA: 408s - loss: 4.9883 - acc: 0.011 - ETA: 405s - loss: 4.9879 - acc: 0.011 - ETA: 403s - loss: 4.9875 - acc: 0.011 - ETA: 401s - loss: 4.9869 - acc: 0.011 - ETA: 398s - loss: 4.9858 - acc: 0.011 - ETA: 395s - loss: 4.9841 - acc: 0.011 - ETA: 392s - loss: 4.9837 - acc: 0.011 - ETA: 389s - loss: 4.9823 - acc: 0.011 - ETA: 386s - loss: 4.9812 - acc: 0.011 - ETA: 383s - loss: 4.9794 - acc: 0.011 - ETA: 380s - loss: 4.9793 - acc: 0.011 - ETA: 377s - loss: 4.9787 - acc: 0.011 - ETA: 374s - loss: 4.9784 - acc: 0.012 - ETA: 371s - loss: 4.9778 - acc: 0.011 - ETA: 369s - loss: 4.9782 - acc: 0.01196660/6680 [============================&gt;.] - ETA: 366s - loss: 4.9779 - acc: 0.012 - ETA: 363s - loss: 4.9770 - acc: 0.012 - ETA: 360s - loss: 4.9764 - acc: 0.012 - ETA: 357s - loss: 4.9758 - acc: 0.011 - ETA: 354s - loss: 4.9751 - acc: 0.011 - ETA: 351s - loss: 4.9741 - acc: 0.012 - ETA: 348s - loss: 4.9730 - acc: 0.012 - ETA: 345s - loss: 4.9719 - acc: 0.012 - ETA: 342s - loss: 4.9705 - acc: 0.012 - ETA: 339s - loss: 4.9723 - acc: 0.012 - ETA: 337s - loss: 4.9719 - acc: 0.012 - ETA: 334s - loss: 4.9713 - acc: 0.011 - ETA: 331s - loss: 4.9706 - acc: 0.011 - ETA: 328s - loss: 4.9699 - acc: 0.011 - ETA: 326s - loss: 4.9698 - acc: 0.011 - ETA: 323s - loss: 4.9693 - acc: 0.011 - ETA: 320s - loss: 4.9687 - acc: 0.011 - ETA: 317s - loss: 4.9680 - acc: 0.011 - ETA: 314s - loss: 4.9666 - acc: 0.011 - ETA: 311s - loss: 4.9658 - acc: 0.011 - ETA: 309s - loss: 4.9658 - acc: 0.011 - ETA: 306s - loss: 4.9650 - acc: 0.011 - ETA: 303s - loss: 4.9641 - acc: 0.011 - ETA: 301s - loss: 4.9636 - acc: 0.011 - ETA: 298s - loss: 4.9633 - acc: 0.011 - ETA: 295s - loss: 4.9624 - acc: 0.011 - ETA: 293s - loss: 4.9623 - acc: 0.012 - ETA: 290s - loss: 4.9614 - acc: 0.012 - ETA: 288s - loss: 4.9611 - acc: 0.011 - ETA: 285s - loss: 4.9607 - acc: 0.011 - ETA: 283s - loss: 4.9598 - acc: 0.011 - ETA: 280s - loss: 4.9590 - acc: 0.011 - ETA: 277s - loss: 4.9583 - acc: 0.011 - ETA: 275s - loss: 4.9576 - acc: 0.011 - ETA: 272s - loss: 4.9563 - acc: 0.012 - ETA: 269s - loss: 4.9563 - acc: 0.012 - ETA: 267s - loss: 4.9559 - acc: 0.012 - ETA: 264s - loss: 4.9552 - acc: 0.012 - ETA: 261s - loss: 4.9549 - acc: 0.012 - ETA: 258s - loss: 4.9539 - acc: 0.012 - ETA: 255s - loss: 4.9530 - acc: 0.012 - ETA: 252s - loss: 4.9515 - acc: 0.012 - ETA: 249s - loss: 4.9503 - acc: 0.012 - ETA: 247s - loss: 4.9494 - acc: 0.012 - ETA: 244s - loss: 4.9481 - acc: 0.012 - ETA: 241s - loss: 4.9480 - acc: 0.012 - ETA: 238s - loss: 4.9480 - acc: 0.012 - ETA: 236s - loss: 4.9475 - acc: 0.012 - ETA: 233s - loss: 4.9467 - acc: 0.012 - ETA: 230s - loss: 4.9455 - acc: 0.012 - ETA: 227s - loss: 4.9460 - acc: 0.012 - ETA: 225s - loss: 4.9454 - acc: 0.012 - ETA: 222s - loss: 4.9448 - acc: 0.012 - ETA: 219s - loss: 4.9441 - acc: 0.012 - ETA: 216s - loss: 4.9435 - acc: 0.012 - ETA: 214s - loss: 4.9430 - acc: 0.012 - ETA: 211s - loss: 4.9433 - acc: 0.012 - ETA: 208s - loss: 4.9426 - acc: 0.012 - ETA: 205s - loss: 4.9415 - acc: 0.012 - ETA: 202s - loss: 4.9408 - acc: 0.012 - ETA: 199s - loss: 4.9398 - acc: 0.012 - ETA: 196s - loss: 4.9390 - acc: 0.012 - ETA: 193s - loss: 4.9383 - acc: 0.012 - ETA: 191s - loss: 4.9377 - acc: 0.012 - ETA: 188s - loss: 4.9375 - acc: 0.012 - ETA: 185s - loss: 4.9368 - acc: 0.013 - ETA: 182s - loss: 4.9367 - acc: 0.013 - ETA: 180s - loss: 4.9365 - acc: 0.013 - ETA: 177s - loss: 4.9363 - acc: 0.013 - ETA: 174s - loss: 4.9357 - acc: 0.013 - ETA: 171s - loss: 4.9348 - acc: 0.013 - ETA: 169s - loss: 4.9334 - acc: 0.013 - ETA: 166s - loss: 4.9325 - acc: 0.013 - ETA: 163s - loss: 4.9319 - acc: 0.013 - ETA: 160s - loss: 4.9306 - acc: 0.013 - ETA: 157s - loss: 4.9304 - acc: 0.013 - ETA: 155s - loss: 4.9299 - acc: 0.013 - ETA: 152s - loss: 4.9291 - acc: 0.013 - ETA: 149s - loss: 4.9285 - acc: 0.013 - ETA: 146s - loss: 4.9277 - acc: 0.013 - ETA: 143s - loss: 4.9266 - acc: 0.013 - ETA: 140s - loss: 4.9265 - acc: 0.013 - ETA: 137s - loss: 4.9261 - acc: 0.013 - ETA: 135s - loss: 4.9256 - acc: 0.013 - ETA: 132s - loss: 4.9241 - acc: 0.013 - ETA: 129s - loss: 4.9237 - acc: 0.013 - ETA: 126s - loss: 4.9227 - acc: 0.014 - ETA: 123s - loss: 4.9228 - acc: 0.014 - ETA: 121s - loss: 4.9229 - acc: 0.014 - ETA: 118s - loss: 4.9229 - acc: 0.014 - ETA: 115s - loss: 4.9221 - acc: 0.014 - ETA: 112s - loss: 4.9214 - acc: 0.014 - ETA: 109s - loss: 4.9207 - acc: 0.014 - ETA: 107s - loss: 4.9197 - acc: 0.014 - ETA: 104s - loss: 4.9207 - acc: 0.014 - ETA: 101s - loss: 4.9198 - acc: 0.014 - ETA: 98s - loss: 4.9200 - acc: 0.014 - ETA: 95s - loss: 4.9197 - acc: 0.01 - ETA: 93s - loss: 4.9192 - acc: 0.01 - ETA: 90s - loss: 4.9177 - acc: 0.01 - ETA: 87s - loss: 4.9174 - acc: 0.01 - ETA: 84s - loss: 4.9172 - acc: 0.01 - ETA: 81s - loss: 4.9165 - acc: 0.01 - ETA: 79s - loss: 4.9152 - acc: 0.01 - ETA: 76s - loss: 4.9143 - acc: 0.01 - ETA: 73s - loss: 4.9142 - acc: 0.01 - ETA: 70s - loss: 4.9139 - acc: 0.01 - ETA: 67s - loss: 4.9132 - acc: 0.01 - ETA: 65s - loss: 4.9124 - acc: 0.01 - ETA: 62s - loss: 4.9127 - acc: 0.01 - ETA: 59s - loss: 4.9120 - acc: 0.01 - ETA: 56s - loss: 4.9108 - acc: 0.01 - ETA: 53s - loss: 4.9097 - acc: 0.01 - ETA: 51s - loss: 4.9091 - acc: 0.01 - ETA: 48s - loss: 4.9088 - acc: 0.01 - ETA: 45s - loss: 4.9083 - acc: 0.01 - ETA: 42s - loss: 4.9076 - acc: 0.01 - ETA: 39s - loss: 4.9067 - acc: 0.01 - ETA: 36s - loss: 4.9063 - acc: 0.01 - ETA: 34s - loss: 4.9059 - acc: 0.01 - ETA: 31s - loss: 4.9055 - acc: 0.01 - ETA: 28s - loss: 4.9048 - acc: 0.01 - ETA: 25s - loss: 4.9038 - acc: 0.01 - ETA: 22s - loss: 4.9034 - acc: 0.01 - ETA: 19s - loss: 4.9034 - acc: 0.01 - ETA: 17s - loss: 4.9026 - acc: 0.01 - ETA: 14s - loss: 4.9018 - acc: 0.01 - ETA: 11s - loss: 4.9014 - acc: 0.01 - ETA: 8s - loss: 4.9003 - acc: 0.0142 - ETA: 5s - loss: 4.8998 - acc: 0.014 - ETA: 2s - loss: 4.8993 - acc: 0.0143Epoch 00000: val_loss improved from inf to 4.70887, saving model to saved_models/weights.best.from_scratch.hdf5
+4040/6680 [=================&gt;............] - ETA: 4963s - loss: 5.0155 - acc: 0.0000e+ - ETA: 2833s - loss: 9.4772 - acc: 0.0000e+ - ETA: 2144s - loss: 10.4942 - acc: 0.0000e+0 - ETA: 1789s - loss: 9.4592 - acc: 0.0000e+0 - ETA: 1553s - loss: 8.5979 - acc: 0.0000e+ - ETA: 1416s - loss: 8.0157 - acc: 0.0000e+ - ETA: 1316s - loss: 7.6423 - acc: 0.0000e+ - ETA: 1244s - loss: 7.3108 - acc: 0.0000e+ - ETA: 1177s - loss: 7.0551 - acc: 0.0056   - ETA: 1121s - loss: 6.8547 - acc: 0.00 - ETA: 1080s - loss: 6.6842 - acc: 0.00 - ETA: 1063s - loss: 6.5412 - acc: 0.00 - ETA: 1039s - loss: 6.4150 - acc: 0.00 - ETA: 1014s - loss: 6.3020 - acc: 0.00 - ETA: 997s - loss: 6.2097 - acc: 0.0033 - ETA: 977s - loss: 6.1308 - acc: 0.003 - ETA: 957s - loss: 6.0580 - acc: 0.005 - ETA: 941s - loss: 5.9905 - acc: 0.005 - ETA: 929s - loss: 5.9326 - acc: 0.007 - ETA: 918s - loss: 5.8806 - acc: 0.007 - ETA: 911s - loss: 5.8349 - acc: 0.007 - ETA: 899s - loss: 5.7928 - acc: 0.006 - ETA: 886s - loss: 5.7530 - acc: 0.006 - ETA: 875s - loss: 5.7183 - acc: 0.006 - ETA: 865s - loss: 5.6847 - acc: 0.006 - ETA: 855s - loss: 5.6547 - acc: 0.007 - ETA: 853s - loss: 5.6260 - acc: 0.007 - ETA: 849s - loss: 5.5987 - acc: 0.008 - ETA: 853s - loss: 5.5730 - acc: 0.008 - ETA: 844s - loss: 5.5500 - acc: 0.008 - ETA: 839s - loss: 5.5281 - acc: 0.008 - ETA: 832s - loss: 5.5061 - acc: 0.007 - ETA: 827s - loss: 5.4864 - acc: 0.009 - ETA: 828s - loss: 5.4714 - acc: 0.010 - ETA: 827s - loss: 5.4546 - acc: 0.010 - ETA: 821s - loss: 5.4380 - acc: 0.009 - ETA: 813s - loss: 5.4225 - acc: 0.009 - ETA: 809s - loss: 5.4090 - acc: 0.009 - ETA: 802s - loss: 5.3967 - acc: 0.009 - ETA: 795s - loss: 5.3841 - acc: 0.008 - ETA: 789s - loss: 5.3720 - acc: 0.008 - ETA: 784s - loss: 5.3609 - acc: 0.008 - ETA: 784s - loss: 5.3501 - acc: 0.008 - ETA: 786s - loss: 5.3397 - acc: 0.008 - ETA: 782s - loss: 5.3296 - acc: 0.007 - ETA: 776s - loss: 5.3198 - acc: 0.007 - ETA: 771s - loss: 5.3107 - acc: 0.008 - ETA: 768s - loss: 5.3019 - acc: 0.008 - ETA: 762s - loss: 5.2937 - acc: 0.008 - ETA: 757s - loss: 5.2856 - acc: 0.008 - ETA: 752s - loss: 5.2778 - acc: 0.008 - ETA: 748s - loss: 5.2702 - acc: 0.009 - ETA: 743s - loss: 5.2628 - acc: 0.009 - ETA: 738s - loss: 5.2566 - acc: 0.009 - ETA: 739s - loss: 5.2502 - acc: 0.009 - ETA: 735s - loss: 5.2437 - acc: 0.008 - ETA: 730s - loss: 5.2374 - acc: 0.008 - ETA: 725s - loss: 5.2313 - acc: 0.008 - ETA: 727s - loss: 5.2260 - acc: 0.008 - ETA: 732s - loss: 5.2202 - acc: 0.008 - ETA: 729s - loss: 5.2146 - acc: 0.008 - ETA: 725s - loss: 5.2092 - acc: 0.008 - ETA: 724s - loss: 5.2036 - acc: 0.007 - ETA: 721s - loss: 5.1983 - acc: 0.008 - ETA: 716s - loss: 5.1922 - acc: 0.008 - ETA: 716s - loss: 5.1893 - acc: 0.009 - ETA: 713s - loss: 5.1852 - acc: 0.009 - ETA: 710s - loss: 5.1812 - acc: 0.008 - ETA: 709s - loss: 5.1764 - acc: 0.009 - ETA: 707s - loss: 5.1719 - acc: 0.009 - ETA: 708s - loss: 5.1671 - acc: 0.009 - ETA: 704s - loss: 5.1631 - acc: 0.009 - ETA: 700s - loss: 5.1594 - acc: 0.008 - ETA: 696s - loss: 5.1554 - acc: 0.008 - ETA: 693s - loss: 5.1541 - acc: 0.008 - ETA: 693s - loss: 5.1497 - acc: 0.008 - ETA: 690s - loss: 5.1457 - acc: 0.009 - ETA: 685s - loss: 5.1420 - acc: 0.009 - ETA: 683s - loss: 5.1376 - acc: 0.008 - ETA: 681s - loss: 5.1346 - acc: 0.008 - ETA: 680s - loss: 5.1325 - acc: 0.008 - ETA: 677s - loss: 5.1293 - acc: 0.008 - ETA: 676s - loss: 5.1269 - acc: 0.008 - ETA: 673s - loss: 5.1238 - acc: 0.008 - ETA: 671s - loss: 5.1212 - acc: 0.008 - ETA: 666s - loss: 5.1178 - acc: 0.009 - ETA: 666s - loss: 5.1150 - acc: 0.009 - ETA: 664s - loss: 5.1121 - acc: 0.009 - ETA: 662s - loss: 5.1105 - acc: 0.009 - ETA: 661s - loss: 5.1076 - acc: 0.009 - ETA: 657s - loss: 5.1050 - acc: 0.009 - ETA: 656s - loss: 5.1032 - acc: 0.009 - ETA: 652s - loss: 5.1004 - acc: 0.010 - ETA: 649s - loss: 5.0985 - acc: 0.010 - ETA: 645s - loss: 5.0963 - acc: 0.010 - ETA: 642s - loss: 5.0942 - acc: 0.010 - ETA: 639s - loss: 5.0918 - acc: 0.010 - ETA: 637s - loss: 5.0899 - acc: 0.010 - ETA: 637s - loss: 5.0873 - acc: 0.010 - ETA: 633s - loss: 5.0850 - acc: 0.010 - ETA: 631s - loss: 5.0831 - acc: 0.010 - ETA: 629s - loss: 5.0813 - acc: 0.010 - ETA: 627s - loss: 5.0796 - acc: 0.010 - ETA: 626s - loss: 5.0776 - acc: 0.010 - ETA: 623s - loss: 5.0757 - acc: 0.010 - ETA: 623s - loss: 5.0737 - acc: 0.010 - ETA: 621s - loss: 5.0724 - acc: 0.010 - ETA: 617s - loss: 5.0705 - acc: 0.010 - ETA: 616s - loss: 5.0685 - acc: 0.010 - ETA: 614s - loss: 5.0670 - acc: 0.010 - ETA: 613s - loss: 5.0654 - acc: 0.010 - ETA: 610s - loss: 5.0639 - acc: 0.010 - ETA: 609s - loss: 5.0619 - acc: 0.010 - ETA: 610s - loss: 5.0599 - acc: 0.010 - ETA: 610s - loss: 5.0615 - acc: 0.010 - ETA: 608s - loss: 5.0597 - acc: 0.010 - ETA: 607s - loss: 5.0576 - acc: 0.010 - ETA: 603s - loss: 5.0564 - acc: 0.010 - ETA: 603s - loss: 5.0550 - acc: 0.010 - ETA: 601s - loss: 5.0533 - acc: 0.010 - ETA: 601s - loss: 5.0522 - acc: 0.010 - ETA: 597s - loss: 5.0505 - acc: 0.010 - ETA: 593s - loss: 5.0488 - acc: 0.010 - ETA: 589s - loss: 5.0478 - acc: 0.010 - ETA: 587s - loss: 5.0461 - acc: 0.010 - ETA: 585s - loss: 5.0446 - acc: 0.010 - ETA: 581s - loss: 5.0427 - acc: 0.010 - ETA: 579s - loss: 5.0421 - acc: 0.010 - ETA: 576s - loss: 5.0405 - acc: 0.010 - ETA: 572s - loss: 5.0396 - acc: 0.010 - ETA: 569s - loss: 5.0388 - acc: 0.010 - ETA: 566s - loss: 5.0381 - acc: 0.010 - ETA: 562s - loss: 5.0369 - acc: 0.010 - ETA: 559s - loss: 5.0357 - acc: 0.010 - ETA: 556s - loss: 5.0346 - acc: 0.010 - ETA: 552s - loss: 5.0336 - acc: 0.009 - ETA: 549s - loss: 5.0324 - acc: 0.009 - ETA: 546s - loss: 5.0316 - acc: 0.009 - ETA: 542s - loss: 5.0303 - acc: 0.010 - ETA: 540s - loss: 5.0291 - acc: 0.010 - ETA: 537s - loss: 5.0278 - acc: 0.010 - ETA: 533s - loss: 5.0267 - acc: 0.010 - ETA: 532s - loss: 5.0258 - acc: 0.010 - ETA: 529s - loss: 5.0245 - acc: 0.010 - ETA: 526s - loss: 5.0234 - acc: 0.010 - ETA: 523s - loss: 5.0225 - acc: 0.010 - ETA: 521s - loss: 5.0217 - acc: 0.010 - ETA: 517s - loss: 5.0205 - acc: 0.010 - ETA: 515s - loss: 5.0197 - acc: 0.010 - ETA: 512s - loss: 5.0187 - acc: 0.010 - ETA: 508s - loss: 5.0178 - acc: 0.010 - ETA: 506s - loss: 5.0168 - acc: 0.010 - ETA: 503s - loss: 5.0157 - acc: 0.010 - ETA: 501s - loss: 5.0152 - acc: 0.010 - ETA: 498s - loss: 5.0146 - acc: 0.010 - ETA: 497s - loss: 5.0138 - acc: 0.009 - ETA: 493s - loss: 5.0127 - acc: 0.010 - ETA: 490s - loss: 5.0120 - acc: 0.010 - ETA: 487s - loss: 5.0111 - acc: 0.010 - ETA: 484s - loss: 5.0101 - acc: 0.010 - ETA: 482s - loss: 5.0095 - acc: 0.010 - ETA: 479s - loss: 5.0084 - acc: 0.010 - ETA: 476s - loss: 5.0071 - acc: 0.010 - ETA: 473s - loss: 5.0058 - acc: 0.010 - ETA: 470s - loss: 5.0052 - acc: 0.010 - ETA: 467s - loss: 5.0037 - acc: 0.010 - ETA: 464s - loss: 5.0038 - acc: 0.010 - ETA: 462s - loss: 5.0030 - acc: 0.010 - ETA: 460s - loss: 5.0018 - acc: 0.010 - ETA: 457s - loss: 5.0010 - acc: 0.010 - ETA: 453s - loss: 5.0009 - acc: 0.010 - ETA: 451s - loss: 5.0004 - acc: 0.010 - ETA: 449s - loss: 4.9988 - acc: 0.010 - ETA: 446s - loss: 4.9977 - acc: 0.010 - ETA: 444s - loss: 4.9966 - acc: 0.011 - ETA: 441s - loss: 4.9961 - acc: 0.011 - ETA: 438s - loss: 4.9952 - acc: 0.011 - ETA: 435s - loss: 4.9949 - acc: 0.011 - ETA: 433s - loss: 4.9942 - acc: 0.010 - ETA: 430s - loss: 4.9935 - acc: 0.010 - ETA: 427s - loss: 4.9926 - acc: 0.011 - ETA: 424s - loss: 4.9919 - acc: 0.011 - ETA: 422s - loss: 4.9910 - acc: 0.010 - ETA: 419s - loss: 4.9908 - acc: 0.011 - ETA: 416s - loss: 4.9901 - acc: 0.011 - ETA: 413s - loss: 4.9892 - acc: 0.011 - ETA: 411s - loss: 4.9884 - acc: 0.011 - ETA: 408s - loss: 4.9883 - acc: 0.011 - ETA: 405s - loss: 4.9879 - acc: 0.011 - ETA: 403s - loss: 4.9875 - acc: 0.011 - ETA: 401s - loss: 4.9869 - acc: 0.011 - ETA: 398s - loss: 4.9858 - acc: 0.011 - ETA: 395s - loss: 4.9841 - acc: 0.011 - ETA: 392s - loss: 4.9837 - acc: 0.011 - ETA: 389s - loss: 4.9823 - acc: 0.011 - ETA: 386s - loss: 4.9812 - acc: 0.011 - ETA: 383s - loss: 4.9794 - acc: 0.011 - ETA: 380s - loss: 4.9793 - acc: 0.011 - ETA: 377s - loss: 4.9787 - acc: 0.011 - ETA: 374s - loss: 4.9784 - acc: 0.012 - ETA: 371s - loss: 4.9778 - acc: 0.011 - ETA: 369s - loss: 4.9782 - acc: 0.0116660/6680 [============================&gt;.] - ETA: 366s - loss: 4.9779 - acc: 0.012 - ETA: 363s - loss: 4.9770 - acc: 0.012 - ETA: 360s - loss: 4.9764 - acc: 0.012 - ETA: 357s - loss: 4.9758 - acc: 0.011 - ETA: 354s - loss: 4.9751 - acc: 0.011 - ETA: 351s - loss: 4.9741 - acc: 0.012 - ETA: 348s - loss: 4.9730 - acc: 0.012 - ETA: 345s - loss: 4.9719 - acc: 0.012 - ETA: 342s - loss: 4.9705 - acc: 0.012 - ETA: 339s - loss: 4.9723 - acc: 0.012 - ETA: 337s - loss: 4.9719 - acc: 0.012 - ETA: 334s - loss: 4.9713 - acc: 0.011 - ETA: 331s - loss: 4.9706 - acc: 0.011 - ETA: 328s - loss: 4.9699 - acc: 0.011 - ETA: 326s - loss: 4.9698 - acc: 0.011 - ETA: 323s - loss: 4.9693 - acc: 0.011 - ETA: 320s - loss: 4.9687 - acc: 0.011 - ETA: 317s - loss: 4.9680 - acc: 0.011 - ETA: 314s - loss: 4.9666 - acc: 0.011 - ETA: 311s - loss: 4.9658 - acc: 0.011 - ETA: 309s - loss: 4.9658 - acc: 0.011 - ETA: 306s - loss: 4.9650 - acc: 0.011 - ETA: 303s - loss: 4.9641 - acc: 0.011 - ETA: 301s - loss: 4.9636 - acc: 0.011 - ETA: 298s - loss: 4.9633 - acc: 0.011 - ETA: 295s - loss: 4.9624 - acc: 0.011 - ETA: 293s - loss: 4.9623 - acc: 0.012 - ETA: 290s - loss: 4.9614 - acc: 0.012 - ETA: 288s - loss: 4.9611 - acc: 0.011 - ETA: 285s - loss: 4.9607 - acc: 0.011 - ETA: 283s - loss: 4.9598 - acc: 0.011 - ETA: 280s - loss: 4.9590 - acc: 0.011 - ETA: 277s - loss: 4.9583 - acc: 0.011 - ETA: 275s - loss: 4.9576 - acc: 0.011 - ETA: 272s - loss: 4.9563 - acc: 0.012 - ETA: 269s - loss: 4.9563 - acc: 0.012 - ETA: 267s - loss: 4.9559 - acc: 0.012 - ETA: 264s - loss: 4.9552 - acc: 0.012 - ETA: 261s - loss: 4.9549 - acc: 0.012 - ETA: 258s - loss: 4.9539 - acc: 0.012 - ETA: 255s - loss: 4.9530 - acc: 0.012 - ETA: 252s - loss: 4.9515 - acc: 0.012 - ETA: 249s - loss: 4.9503 - acc: 0.012 - ETA: 247s - loss: 4.9494 - acc: 0.012 - ETA: 244s - loss: 4.9481 - acc: 0.012 - ETA: 241s - loss: 4.9480 - acc: 0.012 - ETA: 238s - loss: 4.9480 - acc: 0.012 - ETA: 236s - loss: 4.9475 - acc: 0.012 - ETA: 233s - loss: 4.9467 - acc: 0.012 - ETA: 230s - loss: 4.9455 - acc: 0.012 - ETA: 227s - loss: 4.9460 - acc: 0.012 - ETA: 225s - loss: 4.9454 - acc: 0.012 - ETA: 222s - loss: 4.9448 - acc: 0.012 - ETA: 219s - loss: 4.9441 - acc: 0.012 - ETA: 216s - loss: 4.9435 - acc: 0.012 - ETA: 214s - loss: 4.9430 - acc: 0.012 - ETA: 211s - loss: 4.9433 - acc: 0.012 - ETA: 208s - loss: 4.9426 - acc: 0.012 - ETA: 205s - loss: 4.9415 - acc: 0.012 - ETA: 202s - loss: 4.9408 - acc: 0.012 - ETA: 199s - loss: 4.9398 - acc: 0.012 - ETA: 196s - loss: 4.9390 - acc: 0.012 - ETA: 193s - loss: 4.9383 - acc: 0.012 - ETA: 191s - loss: 4.9377 - acc: 0.012 - ETA: 188s - loss: 4.9375 - acc: 0.012 - ETA: 185s - loss: 4.9368 - acc: 0.013 - ETA: 182s - loss: 4.9367 - acc: 0.013 - ETA: 180s - loss: 4.9365 - acc: 0.013 - ETA: 177s - loss: 4.9363 - acc: 0.013 - ETA: 174s - loss: 4.9357 - acc: 0.013 - ETA: 171s - loss: 4.9348 - acc: 0.013 - ETA: 169s - loss: 4.9334 - acc: 0.013 - ETA: 166s - loss: 4.9325 - acc: 0.013 - ETA: 163s - loss: 4.9319 - acc: 0.013 - ETA: 160s - loss: 4.9306 - acc: 0.013 - ETA: 157s - loss: 4.9304 - acc: 0.013 - ETA: 155s - loss: 4.9299 - acc: 0.013 - ETA: 152s - loss: 4.9291 - acc: 0.013 - ETA: 149s - loss: 4.9285 - acc: 0.013 - ETA: 146s - loss: 4.9277 - acc: 0.013 - ETA: 143s - loss: 4.9266 - acc: 0.013 - ETA: 140s - loss: 4.9265 - acc: 0.013 - ETA: 137s - loss: 4.9261 - acc: 0.013 - ETA: 135s - loss: 4.9256 - acc: 0.013 - ETA: 132s - loss: 4.9241 - acc: 0.013 - ETA: 129s - loss: 4.9237 - acc: 0.013 - ETA: 126s - loss: 4.9227 - acc: 0.014 - ETA: 123s - loss: 4.9228 - acc: 0.014 - ETA: 121s - loss: 4.9229 - acc: 0.014 - ETA: 118s - loss: 4.9229 - acc: 0.014 - ETA: 115s - loss: 4.9221 - acc: 0.014 - ETA: 112s - loss: 4.9214 - acc: 0.014 - ETA: 109s - loss: 4.9207 - acc: 0.014 - ETA: 107s - loss: 4.9197 - acc: 0.014 - ETA: 104s - loss: 4.9207 - acc: 0.014 - ETA: 101s - loss: 4.9198 - acc: 0.014 - ETA: 98s - loss: 4.9200 - acc: 0.014 - ETA: 95s - loss: 4.9197 - acc: 0.01 - ETA: 93s - loss: 4.9192 - acc: 0.01 - ETA: 90s - loss: 4.9177 - acc: 0.01 - ETA: 87s - loss: 4.9174 - acc: 0.01 - ETA: 84s - loss: 4.9172 - acc: 0.01 - ETA: 81s - loss: 4.9165 - acc: 0.01 - ETA: 79s - loss: 4.9152 - acc: 0.01 - ETA: 76s - loss: 4.9143 - acc: 0.01 - ETA: 73s - loss: 4.9142 - acc: 0.01 - ETA: 70s - loss: 4.9139 - acc: 0.01 - ETA: 67s - loss: 4.9132 - acc: 0.01 - ETA: 65s - loss: 4.9124 - acc: 0.01 - ETA: 62s - loss: 4.9127 - acc: 0.01 - ETA: 59s - loss: 4.9120 - acc: 0.01 - ETA: 56s - loss: 4.9108 - acc: 0.01 - ETA: 53s - loss: 4.9097 - acc: 0.01 - ETA: 51s - loss: 4.9091 - acc: 0.01 - ETA: 48s - loss: 4.9088 - acc: 0.01 - ETA: 45s - loss: 4.9083 - acc: 0.01 - ETA: 42s - loss: 4.9076 - acc: 0.01 - ETA: 39s - loss: 4.9067 - acc: 0.01 - ETA: 36s - loss: 4.9063 - acc: 0.01 - ETA: 34s - loss: 4.9059 - acc: 0.01 - ETA: 31s - loss: 4.9055 - acc: 0.01 - ETA: 28s - loss: 4.9048 - acc: 0.01 - ETA: 25s - loss: 4.9038 - acc: 0.01 - ETA: 22s - loss: 4.9034 - acc: 0.01 - ETA: 19s - loss: 4.9034 - acc: 0.01 - ETA: 17s - loss: 4.9026 - acc: 0.01 - ETA: 14s - loss: 4.9018 - acc: 0.01 - ETA: 11s - loss: 4.9014 - acc: 0.01 - ETA: 8s - loss: 4.9003 - acc: 0.0142 - ETA: 5s - loss: 4.8998 - acc: 0.014 - ETA: 2s - loss: 4.8993 - acc: 0.0143Epoch 00000: val_loss improved from inf to 4.70887, saving model to saved_models/weights.best.from_scratch.hdf5
 6680/6680 [==============================] - 1020s - loss: 4.8995 - acc: 0.0142 - val_loss: 4.7089 - val_acc: 0.0204
 Epoch 2/5
 4080/6680 [=================&gt;............] - ETA: 811s - loss: 4.7039 - acc: 0.0000e+0 - ETA: 778s - loss: 4.6038 - acc: 0.0500    - ETA: 768s - loss: 4.6068 - acc: 0.033 - ETA: 810s - loss: 4.5069 - acc: 0.037 - ETA: 838s - loss: 4.4869 - acc: 0.030 - ETA: 866s - loss: 4.5338 - acc: 0.041 - ETA: 855s - loss: 4.5175 - acc: 0.050 - ETA: 848s - loss: 4.4745 - acc: 0.056 - ETA: 837s - loss: 4.5167 - acc: 0.055 - ETA: 852s - loss: 4.5284 - acc: 0.050 - ETA: 844s - loss: 4.5380 - acc: 0.050 - ETA: 858s - loss: 4.5357 - acc: 0.050 - ETA: 946s - loss: 4.5761 - acc: 0.046 - ETA: 951s - loss: 4.5847 - acc: 0.042 - ETA: 962s - loss: 4.5772 - acc: 0.040 - ETA: 973s - loss: 4.5869 - acc: 0.037 - ETA: 982s - loss: 4.5760 - acc: 0.038 - ETA: 1004s - loss: 4.5939 - acc: 0.03 - ETA: 1020s - loss: 4.5767 - acc: 0.03 - ETA: 1014s - loss: 4.5743 - acc: 0.03 - ETA: 1015s - loss: 4.5812 - acc: 0.03 - ETA: 1020s - loss: 4.5713 - acc: 0.03 - ETA: 1029s - loss: 4.5693 - acc: 0.03 - ETA: 1041s - loss: 4.5668 - acc: 0.03 - ETA: 1044s - loss: 4.5685 - acc: 0.03 - ETA: 1038s - loss: 4.5725 - acc: 0.03 - ETA: 1043s - loss: 4.5687 - acc: 0.03 - ETA: 1045s - loss: 4.5704 - acc: 0.03 - ETA: 1046s - loss: 4.5756 - acc: 0.03 - ETA: 1032s - loss: 4.5768 - acc: 0.03 - ETA: 1031s - loss: 4.5771 - acc: 0.03 - ETA: 1021s - loss: 4.5701 - acc: 0.03 - ETA: 1004s - loss: 4.5799 - acc: 0.03 - ETA: 1005s - loss: 4.5793 - acc: 0.03 - ETA: 992s - loss: 4.5707 - acc: 0.0357 - ETA: 979s - loss: 4.5676 - acc: 0.037 - ETA: 967s - loss: 4.5649 - acc: 0.037 - ETA: 964s - loss: 4.5640 - acc: 0.039 - ETA: 961s - loss: 4.5747 - acc: 0.038 - ETA: 961s - loss: 4.5696 - acc: 0.037 - ETA: 952s - loss: 4.5698 - acc: 0.036 - ETA: 949s - loss: 4.5636 - acc: 0.035 - ETA: 951s - loss: 4.5623 - acc: 0.036 - ETA: 948s - loss: 4.5658 - acc: 0.036 - ETA: 940s - loss: 4.5669 - acc: 0.035 - ETA: 936s - loss: 4.5682 - acc: 0.034 - ETA: 928s - loss: 4.5663 - acc: 0.034 - ETA: 927s - loss: 4.5644 - acc: 0.035 - ETA: 920s - loss: 4.5661 - acc: 0.035 - ETA: 924s - loss: 4.5688 - acc: 0.035 - ETA: 914s - loss: 4.5708 - acc: 0.036 - ETA: 911s - loss: 4.5721 - acc: 0.036 - ETA: 903s - loss: 4.5691 - acc: 0.037 - ETA: 896s - loss: 4.5679 - acc: 0.040 - ETA: 890s - loss: 4.5675 - acc: 0.040 - ETA: 886s - loss: 4.5662 - acc: 0.039 - ETA: 882s - loss: 4.5671 - acc: 0.039 - ETA: 874s - loss: 4.5671 - acc: 0.039 - ETA: 871s - loss: 4.5660 - acc: 0.040 - ETA: 870s - loss: 4.5671 - acc: 0.040 - ETA: 863s - loss: 4.5670 - acc: 0.040 - ETA: 857s - loss: 4.5663 - acc: 0.041 - ETA: 852s - loss: 4.5713 - acc: 0.041 - ETA: 850s - loss: 4.5682 - acc: 0.043 - ETA: 845s - loss: 4.5704 - acc: 0.043 - ETA: 844s - loss: 4.5706 - acc: 0.044 - ETA: 840s - loss: 4.5681 - acc: 0.044 - ETA: 837s - loss: 4.5710 - acc: 0.044 - ETA: 837s - loss: 4.5700 - acc: 0.043 - ETA: 836s - loss: 4.5666 - acc: 0.042 - ETA: 832s - loss: 4.5673 - acc: 0.042 - ETA: 827s - loss: 4.5653 - acc: 0.043 - ETA: 822s - loss: 4.5659 - acc: 0.043 - ETA: 817s - loss: 4.5681 - acc: 0.043 - ETA: 815s - loss: 4.5657 - acc: 0.043 - ETA: 809s - loss: 4.5622 - acc: 0.042 - ETA: 804s - loss: 4.5618 - acc: 0.042 - ETA: 799s - loss: 4.5612 - acc: 0.042 - ETA: 797s - loss: 4.5591 - acc: 0.042 - ETA: 791s - loss: 4.5663 - acc: 0.041 - ETA: 788s - loss: 4.5667 - acc: 0.042 - ETA: 783s - loss: 4.5663 - acc: 0.043 - ETA: 779s - loss: 4.5681 - acc: 0.044 - ETA: 774s - loss: 4.5684 - acc: 0.043 - ETA: 771s - loss: 4.5698 - acc: 0.042 - ETA: 767s - loss: 4.5724 - acc: 0.043 - ETA: 763s - loss: 4.5711 - acc: 0.043 - ETA: 759s - loss: 4.5711 - acc: 0.043 - ETA: 758s - loss: 4.5725 - acc: 0.043 - ETA: 753s - loss: 4.5702 - acc: 0.043 - ETA: 748s - loss: 4.5656 - acc: 0.043 - ETA: 744s - loss: 4.5693 - acc: 0.042 - ETA: 741s - loss: 4.5690 - acc: 0.043 - ETA: 736s - loss: 4.5693 - acc: 0.043 - ETA: 731s - loss: 4.5701 - acc: 0.043 - ETA: 726s - loss: 4.5700 - acc: 0.043 - ETA: 723s - loss: 4.5692 - acc: 0.044 - ETA: 718s - loss: 4.5691 - acc: 0.043 - ETA: 714s - loss: 4.5649 - acc: 0.044 - ETA: 711s - loss: 4.5666 - acc: 0.045 - ETA: 707s - loss: 4.5719 - acc: 0.045 - ETA: 704s - loss: 4.5712 - acc: 0.045 - ETA: 700s - loss: 4.5680 - acc: 0.045 - ETA: 697s - loss: 4.5687 - acc: 0.045 - ETA: 692s - loss: 4.5659 - acc: 0.044 - ETA: 688s - loss: 4.5660 - acc: 0.044 - ETA: 685s - loss: 4.5668 - acc: 0.044 - ETA: 680s - loss: 4.5672 - acc: 0.044 - ETA: 675s - loss: 4.5658 - acc: 0.045 - ETA: 671s - loss: 4.5647 - acc: 0.045 - ETA: 669s - loss: 4.5649 - acc: 0.046 - ETA: 665s - loss: 4.5650 - acc: 0.046 - ETA: 662s - loss: 4.5635 - acc: 0.046 - ETA: 657s - loss: 4.5636 - acc: 0.046 - ETA: 653s - loss: 4.5640 - acc: 0.046 - ETA: 650s - loss: 4.5618 - acc: 0.046 - ETA: 646s - loss: 4.5627 - acc: 0.045 - ETA: 642s - loss: 4.5632 - acc: 0.046 - ETA: 639s - loss: 4.5643 - acc: 0.046 - ETA: 635s - loss: 4.5601 - acc: 0.047 - ETA: 632s - loss: 4.5609 - acc: 0.047 - ETA: 630s - loss: 4.5602 - acc: 0.046 - ETA: 626s - loss: 4.5583 - acc: 0.046 - ETA: 622s - loss: 4.5561 - acc: 0.046 - ETA: 619s - loss: 4.5575 - acc: 0.046 - ETA: 616s - loss: 4.5580 - acc: 0.046 - ETA: 614s - loss: 4.5557 - acc: 0.046 - ETA: 611s - loss: 4.5536 - acc: 0.046 - ETA: 606s - loss: 4.5523 - acc: 0.046 - ETA: 603s - loss: 4.5533 - acc: 0.046 - ETA: 599s - loss: 4.5521 - acc: 0.046 - ETA: 595s - loss: 4.5512 - acc: 0.047 - ETA: 591s - loss: 4.5497 - acc: 0.047 - ETA: 590s - loss: 4.5487 - acc: 0.047 - ETA: 586s - loss: 4.5483 - acc: 0.047 - ETA: 583s - loss: 4.5482 - acc: 0.047 - ETA: 580s - loss: 4.5483 - acc: 0.047 - ETA: 577s - loss: 4.5475 - acc: 0.047 - ETA: 573s - loss: 4.5467 - acc: 0.046 - ETA: 570s - loss: 4.5449 - acc: 0.046 - ETA: 566s - loss: 4.5405 - acc: 0.047 - ETA: 562s - loss: 4.5447 - acc: 0.046 - ETA: 559s - loss: 4.5440 - acc: 0.047 - ETA: 555s - loss: 4.5443 - acc: 0.047 - ETA: 552s - loss: 4.5460 - acc: 0.047 - ETA: 547s - loss: 4.5455 - acc: 0.047 - ETA: 545s - loss: 4.5459 - acc: 0.047 - ETA: 541s - loss: 4.5439 - acc: 0.047 - ETA: 537s - loss: 4.5432 - acc: 0.047 - ETA: 534s - loss: 4.5427 - acc: 0.047 - ETA: 531s - loss: 4.5436 - acc: 0.047 - ETA: 528s - loss: 4.5430 - acc: 0.047 - ETA: 526s - loss: 4.5411 - acc: 0.048 - ETA: 522s - loss: 4.5425 - acc: 0.048 - ETA: 521s - loss: 4.5422 - acc: 0.048 - ETA: 518s - loss: 4.5414 - acc: 0.047 - ETA: 514s - loss: 4.5397 - acc: 0.048 - ETA: 512s - loss: 4.5392 - acc: 0.048 - ETA: 509s - loss: 4.5392 - acc: 0.048 - ETA: 506s - loss: 4.5397 - acc: 0.048 - ETA: 502s - loss: 4.5401 - acc: 0.049 - ETA: 500s - loss: 4.5399 - acc: 0.049 - ETA: 497s - loss: 4.5387 - acc: 0.048 - ETA: 496s - loss: 4.5394 - acc: 0.048 - ETA: 493s - loss: 4.5390 - acc: 0.048 - ETA: 490s - loss: 4.5379 - acc: 0.049 - ETA: 486s - loss: 4.5377 - acc: 0.048 - ETA: 483s - loss: 4.5391 - acc: 0.048 - ETA: 480s - loss: 4.5382 - acc: 0.049 - ETA: 477s - loss: 4.5386 - acc: 0.048 - ETA: 473s - loss: 4.5382 - acc: 0.048 - ETA: 471s - loss: 4.5361 - acc: 0.049 - ETA: 467s - loss: 4.5354 - acc: 0.048 - ETA: 464s - loss: 4.5353 - acc: 0.048 - ETA: 461s - loss: 4.5346 - acc: 0.048 - ETA: 457s - loss: 4.5362 - acc: 0.048 - ETA: 455s - loss: 4.5361 - acc: 0.048 - ETA: 452s - loss: 4.5341 - acc: 0.048 - ETA: 448s - loss: 4.5339 - acc: 0.049 - ETA: 445s - loss: 4.5326 - acc: 0.049 - ETA: 442s - loss: 4.5356 - acc: 0.049 - ETA: 438s - loss: 4.5329 - acc: 0.048 - ETA: 437s - loss: 4.5324 - acc: 0.048 - ETA: 433s - loss: 4.5309 - acc: 0.049 - ETA: 430s - loss: 4.5307 - acc: 0.049 - ETA: 426s - loss: 4.5300 - acc: 0.049 - ETA: 423s - loss: 4.5296 - acc: 0.049 - ETA: 421s - loss: 4.5292 - acc: 0.049 - ETA: 418s - loss: 4.5278 - acc: 0.049 - ETA: 415s - loss: 4.5280 - acc: 0.049 - ETA: 413s - loss: 4.5289 - acc: 0.049 - ETA: 410s - loss: 4.5277 - acc: 0.049 - ETA: 406s - loss: 4.5272 - acc: 0.049 - ETA: 404s - loss: 4.5269 - acc: 0.049 - ETA: 401s - loss: 4.5266 - acc: 0.049 - ETA: 398s - loss: 4.5259 - acc: 0.048 - ETA: 395s - loss: 4.5255 - acc: 0.048 - ETA: 391s - loss: 4.5259 - acc: 0.048 - ETA: 388s - loss: 4.5249 - acc: 0.048 - ETA: 385s - loss: 4.5227 - acc: 0.048 - ETA: 383s - loss: 4.5229 - acc: 0.048 - ETA: 379s - loss: 4.5219 - acc: 0.048 - ETA: 376s - loss: 4.5227 - acc: 0.048 - ETA: 373s - loss: 4.5235 - acc: 0.04856660/6680 [============================&gt;.] - ETA: 371s - loss: 4.5242 - acc: 0.048 - ETA: 368s - loss: 4.5224 - acc: 0.048 - ETA: 365s - loss: 4.5215 - acc: 0.048 - ETA: 362s - loss: 4.5212 - acc: 0.048 - ETA: 359s - loss: 4.5212 - acc: 0.049 - ETA: 356s - loss: 4.5205 - acc: 0.049 - ETA: 353s - loss: 4.5187 - acc: 0.049 - ETA: 350s - loss: 4.5181 - acc: 0.049 - ETA: 346s - loss: 4.5172 - acc: 0.049 - ETA: 343s - loss: 4.5170 - acc: 0.049 - ETA: 340s - loss: 4.5145 - acc: 0.049 - ETA: 337s - loss: 4.5141 - acc: 0.049 - ETA: 334s - loss: 4.5126 - acc: 0.050 - ETA: 331s - loss: 4.5142 - acc: 0.050 - ETA: 328s - loss: 4.5155 - acc: 0.049 - ETA: 325s - loss: 4.5152 - acc: 0.049 - ETA: 322s - loss: 4.5159 - acc: 0.049 - ETA: 319s - loss: 4.5144 - acc: 0.049 - ETA: 316s - loss: 4.5132 - acc: 0.049 - ETA: 313s - loss: 4.5118 - acc: 0.049 - ETA: 310s - loss: 4.5103 - acc: 0.049 - ETA: 308s - loss: 4.5105 - acc: 0.050 - ETA: 304s - loss: 4.5111 - acc: 0.050 - ETA: 301s - loss: 4.5106 - acc: 0.050 - ETA: 298s - loss: 4.5115 - acc: 0.049 - ETA: 295s - loss: 4.5114 - acc: 0.050 - ETA: 293s - loss: 4.5092 - acc: 0.050 - ETA: 290s - loss: 4.5082 - acc: 0.051 - ETA: 287s - loss: 4.5083 - acc: 0.051 - ETA: 284s - loss: 4.5060 - acc: 0.051 - ETA: 281s - loss: 4.5063 - acc: 0.051 - ETA: 280s - loss: 4.5060 - acc: 0.051 - ETA: 277s - loss: 4.5054 - acc: 0.051 - ETA: 274s - loss: 4.5042 - acc: 0.051 - ETA: 271s - loss: 4.5041 - acc: 0.051 - ETA: 268s - loss: 4.5036 - acc: 0.051 - ETA: 265s - loss: 4.5028 - acc: 0.051 - ETA: 262s - loss: 4.5008 - acc: 0.052 - ETA: 259s - loss: 4.5000 - acc: 0.052 - ETA: 256s - loss: 4.5005 - acc: 0.052 - ETA: 254s - loss: 4.4989 - acc: 0.052 - ETA: 251s - loss: 4.4974 - acc: 0.052 - ETA: 248s - loss: 4.4978 - acc: 0.052 - ETA: 245s - loss: 4.4978 - acc: 0.052 - ETA: 242s - loss: 4.4964 - acc: 0.052 - ETA: 239s - loss: 4.4966 - acc: 0.052 - ETA: 236s - loss: 4.4962 - acc: 0.052 - ETA: 234s - loss: 4.4953 - acc: 0.051 - ETA: 231s - loss: 4.4948 - acc: 0.051 - ETA: 228s - loss: 4.4937 - acc: 0.051 - ETA: 225s - loss: 4.4943 - acc: 0.051 - ETA: 222s - loss: 4.4941 - acc: 0.051 - ETA: 220s - loss: 4.4939 - acc: 0.051 - ETA: 217s - loss: 4.4925 - acc: 0.051 - ETA: 214s - loss: 4.4918 - acc: 0.052 - ETA: 211s - loss: 4.4912 - acc: 0.051 - ETA: 208s - loss: 4.4897 - acc: 0.052 - ETA: 206s - loss: 4.4884 - acc: 0.052 - ETA: 203s - loss: 4.4880 - acc: 0.052 - ETA: 200s - loss: 4.4866 - acc: 0.052 - ETA: 197s - loss: 4.4860 - acc: 0.052 - ETA: 195s - loss: 4.4853 - acc: 0.052 - ETA: 192s - loss: 4.4850 - acc: 0.052 - ETA: 189s - loss: 4.4846 - acc: 0.052 - ETA: 186s - loss: 4.4848 - acc: 0.052 - ETA: 183s - loss: 4.4842 - acc: 0.052 - ETA: 180s - loss: 4.4832 - acc: 0.052 - ETA: 178s - loss: 4.4815 - acc: 0.052 - ETA: 175s - loss: 4.4815 - acc: 0.052 - ETA: 172s - loss: 4.4798 - acc: 0.052 - ETA: 170s - loss: 4.4794 - acc: 0.052 - ETA: 167s - loss: 4.4809 - acc: 0.052 - ETA: 164s - loss: 4.4809 - acc: 0.051 - ETA: 161s - loss: 4.4802 - acc: 0.052 - ETA: 158s - loss: 4.4803 - acc: 0.052 - ETA: 155s - loss: 4.4800 - acc: 0.052 - ETA: 153s - loss: 4.4795 - acc: 0.052 - ETA: 150s - loss: 4.4798 - acc: 0.051 - ETA: 147s - loss: 4.4791 - acc: 0.051 - ETA: 144s - loss: 4.4779 - acc: 0.051 - ETA: 141s - loss: 4.4775 - acc: 0.051 - ETA: 138s - loss: 4.4769 - acc: 0.051 - ETA: 135s - loss: 4.4772 - acc: 0.051 - ETA: 133s - loss: 4.4768 - acc: 0.051 - ETA: 130s - loss: 4.4765 - acc: 0.051 - ETA: 127s - loss: 4.4756 - acc: 0.052 - ETA: 124s - loss: 4.4748 - acc: 0.052 - ETA: 121s - loss: 4.4739 - acc: 0.052 - ETA: 118s - loss: 4.4728 - acc: 0.052 - ETA: 116s - loss: 4.4729 - acc: 0.052 - ETA: 113s - loss: 4.4716 - acc: 0.052 - ETA: 110s - loss: 4.4721 - acc: 0.052 - ETA: 107s - loss: 4.4716 - acc: 0.052 - ETA: 104s - loss: 4.4722 - acc: 0.052 - ETA: 101s - loss: 4.4720 - acc: 0.052 - ETA: 98s - loss: 4.4702 - acc: 0.052 - ETA: 96s - loss: 4.4700 - acc: 0.05 - ETA: 93s - loss: 4.4708 - acc: 0.05 - ETA: 90s - loss: 4.4701 - acc: 0.05 - ETA: 87s - loss: 4.4687 - acc: 0.05 - ETA: 84s - loss: 4.4668 - acc: 0.05 - ETA: 81s - loss: 4.4666 - acc: 0.05 - ETA: 78s - loss: 4.4661 - acc: 0.05 - ETA: 75s - loss: 4.4650 - acc: 0.05 - ETA: 73s - loss: 4.4651 - acc: 0.05 - ETA: 70s - loss: 4.4648 - acc: 0.05 - ETA: 67s - loss: 4.4647 - acc: 0.05 - ETA: 64s - loss: 4.4644 - acc: 0.05 - ETA: 61s - loss: 4.4651 - acc: 0.05 - ETA: 58s - loss: 4.4649 - acc: 0.05 - ETA: 55s - loss: 4.4634 - acc: 0.05 - ETA: 52s - loss: 4.4628 - acc: 0.05 - ETA: 49s - loss: 4.4629 - acc: 0.05 - ETA: 46s - loss: 4.4629 - acc: 0.05 - ETA: 43s - loss: 4.4630 - acc: 0.05 - ETA: 41s - loss: 4.4625 - acc: 0.05 - ETA: 38s - loss: 4.4625 - acc: 0.05 - ETA: 35s - loss: 4.4623 - acc: 0.05 - ETA: 32s - loss: 4.4627 - acc: 0.05 - ETA: 29s - loss: 4.4617 - acc: 0.05 - ETA: 26s - loss: 4.4620 - acc: 0.05 - ETA: 23s - loss: 4.4623 - acc: 0.05 - ETA: 20s - loss: 4.4615 - acc: 0.05 - ETA: 17s - loss: 4.4606 - acc: 0.05 - ETA: 14s - loss: 4.4594 - acc: 0.05 - ETA: 11s - loss: 4.4588 - acc: 0.05 - ETA: 8s - loss: 4.4590 - acc: 0.0527 - ETA: 5s - loss: 4.4588 - acc: 0.052 - ETA: 2s - loss: 4.4587 - acc: 0.0529Epoch 00001: val_loss improved from 4.70887 to 4.37915, saving model to saved_models/weights.best.from_scratch.hdf5
@@ -13766,7 +15103,9 @@ Epoch 5/5
 </div>
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[17]:</div>
+
+    <div class="prompt output_prompt">Out[17]:</div>
+
 
 
 
@@ -13780,10 +15119,8 @@ Epoch 5/5
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Load-the-Model-with-the-Best-Validation-Loss">Load the Model with the Best Validation Loss<a class="anchor-link" href="#Load-the-Model-with-the-Best-Validation-Loss">&#182;</a></h3>
 </div>
@@ -13797,15 +15134,13 @@ Epoch 5/5
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">load_weights</span><span class="p">(</span><span class="s1">&#39;saved_models/weights.best.from_scratch.hdf5&#39;</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Test-the-Model">Test the Model<a class="anchor-link" href="#Test-the-Model">&#182;</a></h3><p>Try out your model on the test dataset of dog images.  Ensure that your test accuracy is greater than 1%.</p>
 
@@ -13825,7 +15160,7 @@ Epoch 5/5
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Test accuracy: </span><span class="si">%.4f%%</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">test_accuracy</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -13834,7 +15169,9 @@ Epoch 5/5
 
 
 <div class="output_area">
-<div class="prompt"></div>
+
+    <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Test accuracy: 6.6986%
@@ -13846,10 +15183,8 @@ Epoch 5/5
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
 <p><a id='step4'></a></p>
@@ -13869,15 +15204,13 @@ Epoch 5/5
 <span class="n">test_VGG16</span> <span class="o">=</span> <span class="n">bottleneck_features</span><span class="p">[</span><span class="s1">&#39;test&#39;</span><span class="p">]</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Model-Architecture">Model Architecture<a class="anchor-link" href="#Model-Architecture">&#182;</a></h3><p>The model uses the the pre-trained VGG-16 model as a fixed feature extractor, where the last convolutional output of VGG-16 is fed as input to our model.  We only add a global average pooling layer and a fully connected layer, where the latter contains one node for each dog category and is equipped with a softmax.</p>
 
@@ -13896,7 +15229,7 @@ Epoch 5/5
 <span class="n">VGG16_model</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -13905,7 +15238,9 @@ Epoch 5/5
 
 
 <div class="output_area">
-<div class="prompt"></div>
+
+    <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>_________________________________________________________________
@@ -13927,10 +15262,8 @@ _________________________________________________________________
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Compile-the-Model">Compile the Model<a class="anchor-link" href="#Compile-the-Model">&#182;</a></h3>
 </div>
@@ -13944,15 +15277,13 @@ _________________________________________________________________
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">VGG16_model</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">loss</span><span class="o">=</span><span class="s1">&#39;categorical_crossentropy&#39;</span><span class="p">,</span> <span class="n">optimizer</span><span class="o">=</span><span class="s1">&#39;rmsprop&#39;</span><span class="p">,</span> <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;accuracy&#39;</span><span class="p">])</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Train-the-Model">Train the Model<a class="anchor-link" href="#Train-the-Model">&#182;</a></h3>
 </div>
@@ -13971,7 +15302,7 @@ _________________________________________________________________
           <span class="n">epochs</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">callbacks</span><span class="o">=</span><span class="p">[</span><span class="n">checkpointer</span><span class="p">],</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -13980,7 +15311,9 @@ _________________________________________________________________
 
 
 <div class="output_area">
-<div class="prompt"></div>
+
+    <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Train on 6680 samples, validate on 835 samples
@@ -14049,7 +15382,9 @@ Epoch 20/20
 </div>
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[23]:</div>
+
+    <div class="prompt output_prompt">Out[23]:</div>
+
 
 
 
@@ -14063,10 +15398,8 @@ Epoch 20/20
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Load-the-Model-with-the-Best-Validation-Loss">Load the Model with the Best Validation Loss<a class="anchor-link" href="#Load-the-Model-with-the-Best-Validation-Loss">&#182;</a></h3>
 </div>
@@ -14080,15 +15413,13 @@ Epoch 20/20
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">VGG16_model</span><span class="o">.</span><span class="n">load_weights</span><span class="p">(</span><span class="s1">&#39;saved_models/weights.best.VGG16.hdf5&#39;</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Test-the-Model">Test the Model<a class="anchor-link" href="#Test-the-Model">&#182;</a></h3><p>Now, we can use the CNN to test how well it identifies breed within our test dataset of dog images.  We print the test accuracy below.</p>
 
@@ -14108,7 +15439,7 @@ Epoch 20/20
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Test accuracy: </span><span class="si">%.4f%%</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">test_accuracy</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -14117,7 +15448,9 @@ Epoch 20/20
 
 
 <div class="output_area">
-<div class="prompt"></div>
+
+    <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Test accuracy: 41.2679%
@@ -14129,10 +15462,8 @@ Epoch 20/20
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Predict-Dog-Breed-with-the-Model">Predict Dog Breed with the Model<a class="anchor-link" href="#Predict-Dog-Breed-with-the-Model">&#182;</a></h3>
 </div>
@@ -14154,15 +15485,13 @@ Epoch 20/20
     <span class="k">return</span> <span class="n">dog_names</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">predicted_vector</span><span class="p">)]</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
 <p><a id='step5'></a></p>
@@ -14202,15 +15531,13 @@ test_{network} = bottleneck_features['test']</code></pre>
 <span class="n">test_DogResnet50</span> <span class="o">=</span> <span class="n">bottleneck_features</span><span class="p">[</span><span class="s1">&#39;test&#39;</span><span class="p">]</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="(IMPLEMENTATION)-Model-Architecture">(IMPLEMENTATION) Model Architecture<a class="anchor-link" href="#(IMPLEMENTATION)-Model-Architecture">&#182;</a></h3><p>Create a CNN to classify dog breed.  At the end of your code cell block, summarize the layers of your model by executing the line:</p>
 
@@ -14218,7 +15545,8 @@ test_{network} = bottleneck_features['test']</code></pre>
 
 </code></pre>
 <p><strong>Question 5:</strong> Outline the steps you took to get to your final CNN architecture and your reasoning at each step.  Describe why you think the architecture is suitable for the current problem.</p>
-<p><strong>Answer:</strong></p>
+<p><strong>Answer:</strong> 
+The advantage of Resnet is that it solves the vanishing gradient problem while keeping an excellent performance. This allows to have a deeper neural network. They have many other advantages which allow good results.</p>
 
 </div>
 </div>
@@ -14236,7 +15564,7 @@ test_{network} = bottleneck_features['test']</code></pre>
 <span class="n">Resnet50_model</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -14245,7 +15573,9 @@ test_{network} = bottleneck_features['test']</code></pre>
 
 
 <div class="output_area">
-<div class="prompt"></div>
+
+    <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>_________________________________________________________________
@@ -14267,10 +15597,8 @@ _________________________________________________________________
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="(IMPLEMENTATION)-Compile-the-Model">(IMPLEMENTATION) Compile the Model<a class="anchor-link" href="#(IMPLEMENTATION)-Compile-the-Model">&#182;</a></h3>
 </div>
@@ -14285,15 +15613,13 @@ _________________________________________________________________
 <span class="n">Resnet50_model</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">loss</span><span class="o">=</span><span class="s1">&#39;categorical_crossentropy&#39;</span><span class="p">,</span> <span class="n">optimizer</span><span class="o">=</span><span class="s1">&#39;rmsprop&#39;</span><span class="p">,</span> <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;accuracy&#39;</span><span class="p">])</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="(IMPLEMENTATION)-Train-the-Model">(IMPLEMENTATION) Train the Model<a class="anchor-link" href="#(IMPLEMENTATION)-Train-the-Model">&#182;</a></h3><p>Train your model in the code cell below.  Use model checkpointing to save the model that attains the best validation loss.</p>
 <p>You are welcome to <a href="https://blog.keras.io/building-powerful-image-classification-models-using-very-little-data.html">augment the training data</a>, but this is not a requirement.</p>
@@ -14312,7 +15638,7 @@ _________________________________________________________________
 <span class="n">Resnet50_model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">train_DogResnet50</span><span class="p">,</span> <span class="n">train_targets</span><span class="p">,</span> <span class="n">validation_data</span><span class="o">=</span><span class="p">(</span><span class="n">valid_DogResnet50</span><span class="p">,</span> <span class="n">valid_targets</span><span class="p">),</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">callbacks</span><span class="o">=</span><span class="p">[</span><span class="n">checkpointer</span><span class="p">],</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -14321,7 +15647,9 @@ _________________________________________________________________
 
 
 <div class="output_area">
-<div class="prompt"></div>
+
+    <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Train on 6680 samples, validate on 835 samples
@@ -14390,7 +15718,9 @@ Epoch 20/20
 </div>
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[30]:</div>
+
+    <div class="prompt output_prompt">Out[30]:</div>
+
 
 
 
@@ -14404,10 +15734,8 @@ Epoch 20/20
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="(IMPLEMENTATION)-Load-the-Model-with-the-Best-Validation-Loss">(IMPLEMENTATION) Load the Model with the Best Validation Loss<a class="anchor-link" href="#(IMPLEMENTATION)-Load-the-Model-with-the-Best-Validation-Loss">&#182;</a></h3>
 </div>
@@ -14422,15 +15750,13 @@ Epoch 20/20
 <span class="n">Resnet50_model</span><span class="o">.</span><span class="n">load_weights</span><span class="p">(</span><span class="s1">&#39;saved_models/weights.best.ResNet50.hdf5&#39;</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="(IMPLEMENTATION)-Test-the-Model">(IMPLEMENTATION) Test the Model<a class="anchor-link" href="#(IMPLEMENTATION)-Test-the-Model">&#182;</a></h3><p>Try out your model on the test dataset of dog images. Ensure that your test accuracy is greater than 60%.</p>
 
@@ -14449,7 +15775,7 @@ Epoch 20/20
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Test accuracy: </span><span class="si">%.4f%%</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">test_accuracy</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -14458,7 +15784,9 @@ Epoch 20/20
 
 
 <div class="output_area">
-<div class="prompt"></div>
+
+    <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Test accuracy: 80.3828%
@@ -14470,10 +15798,8 @@ Epoch 20/20
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="(IMPLEMENTATION)-Predict-Dog-Breed-with-the-Model">(IMPLEMENTATION) Predict Dog Breed with the Model<a class="anchor-link" href="#(IMPLEMENTATION)-Predict-Dog-Breed-with-the-Model">&#182;</a></h3><p>Write a function that takes an image path as input and returns the dog breed (<code>Affenpinscher</code>, <code>Afghan_hound</code>, etc) that is predicted by your model.</p>
 <p>Similar to the analogous function in Step 5, your function should have three steps:</p>
@@ -14511,15 +15837,13 @@ Epoch 20/20
     <span class="k">return</span> <span class="n">dog_names</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">prediction</span><span class="p">)]</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
 <p><a id='step6'></a></p>
@@ -14562,15 +15886,13 @@ Epoch 20/20
         <span class="nb">print</span><span class="p">(</span><span class="n">img_path</span> <span class="o">+</span> <span class="s2">&quot; cannot be detected!&quot;</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
 <p><a id='step7'></a></p>
@@ -14598,7 +15920,7 @@ Epoch 20/20
     <span class="n">dog_breed_detector</span><span class="p">(</span><span class="n">test_file</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -14607,7 +15929,9 @@ Epoch 20/20
 
 
 <div class="output_area">
-<div class="prompt"></div>
+
+    <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>[&#39;images\\American_water_spaniel_00648.jpg&#39; &#39;images\\Brittany_02625.jpg&#39;
@@ -14622,7 +15946,9 @@ Epoch 20/20
 </div>
 
 <div class="output_area">
-<div class="prompt"></div>
+
+    <div class="prompt"></div>
+
 
 
 
@@ -17339,7 +18665,9 @@ p/EpxemEehqncRqn8SnF/wOr2R3Z7IT8pQAAAABJRU5ErkJggg==
 </div>
 
 <div class="output_area">
-<div class="prompt"></div>
+
+    <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>images\American_water_spaniel_00648.jpg is a dog. Breed: Irish_water_spaniel
@@ -17348,7 +18676,9 @@ p/EpxemEehqncRqn8SnF/wOr2R3Z7IT8pQAAAABJRU5ErkJggg==
 </div>
 
 <div class="output_area">
-<div class="prompt"></div>
+
+    <div class="prompt"></div>
+
 
 
 
@@ -18923,7 +20253,9 @@ dbo79LBn6msAAAAASUVORK5CYII=
 </div>
 
 <div class="output_area">
-<div class="prompt"></div>
+
+    <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>images\Brittany_02625.jpg is a dog. Breed: Brittany
@@ -18932,7 +20264,9 @@ dbo79LBn6msAAAAASUVORK5CYII=
 </div>
 
 <div class="output_area">
-<div class="prompt"></div>
+
+    <div class="prompt"></div>
+
 
 
 
@@ -21687,7 +23021,9 @@ AElFTkSuQmCC
 </div>
 
 <div class="output_area">
-<div class="prompt"></div>
+
+    <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>images\Curly-coated_retriever_03896.jpg is a dog. Breed: Curly-coated_retriever
@@ -21696,7 +23032,9 @@ AElFTkSuQmCC
 </div>
 
 <div class="output_area">
-<div class="prompt"></div>
+
+    <div class="prompt"></div>
+
 
 
 
@@ -24130,7 +25468,9 @@ c+B/ANMlf5S0FVdJAAAAAElFTkSuQmCC
 </div>
 
 <div class="output_area">
-<div class="prompt"></div>
+
+    <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>images\Labrador_retriever_06449.jpg is a dog. Breed: Labrador_retriever
@@ -24139,7 +25479,9 @@ c+B/ANMlf5S0FVdJAAAAAElFTkSuQmCC
 </div>
 
 <div class="output_area">
-<div class="prompt"></div>
+
+    <div class="prompt"></div>
+
 
 
 
@@ -26245,7 +27587,9 @@ kD2Xg6E+yEEOcpA9l4OhPshBDnKQPZf/B1p6NXzNc1EZAAAAAElFTkSuQmCC
 </div>
 
 <div class="output_area">
-<div class="prompt"></div>
+
+    <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>images\Labrador_retriever_06455.jpg is a dog. Breed: Chesapeake_bay_retriever
@@ -26254,7 +27598,9 @@ kD2Xg6E+yEEOcpA9l4OhPshBDnKQPZf/B1p6NXzNc1EZAAAAAElFTkSuQmCC
 </div>
 
 <div class="output_area">
-<div class="prompt"></div>
+
+    <div class="prompt"></div>
+
 
 
 
@@ -28000,7 +29346,9 @@ AAAASUVORK5CYII=
 </div>
 
 <div class="output_area">
-<div class="prompt"></div>
+
+    <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>images\Labrador_retriever_06457.jpg is a dog. Breed: Labrador_retriever
@@ -28009,7 +29357,9 @@ AAAASUVORK5CYII=
 </div>
 
 <div class="output_area">
-<div class="prompt"></div>
+
+    <div class="prompt"></div>
+
 
 
 
@@ -28667,7 +30017,9 @@ CB30NRqNpgmhg75Go9E0If4DqhM/bb1UKJMAAAAASUVORK5CYII=
 </div>
 
 <div class="output_area">
-<div class="prompt"></div>
+
+    <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>images\sample_cnn.png cannot be detected!
@@ -28676,7 +30028,9 @@ CB30NRqNpgmhg75Go9E0If4DqhM/bb1UKJMAAAAASUVORK5CYII=
 </div>
 
 <div class="output_area">
-<div class="prompt"></div>
+
+    <div class="prompt"></div>
+
 
 
 
@@ -30101,7 +31455,9 @@ uI0twu3gu43b2CLcDr7buI0twu3gu43b2CLcDr7buI0twu3gu43b2CLcDr7buI0twv8PrZ908kBf
 </div>
 
 <div class="output_area">
-<div class="prompt"></div>
+
+    <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>images\sample_dog_output.png cannot be detected!
@@ -30110,7 +31466,9 @@ uI0twu3gu43b2CLcDr7buI0twu3gu43b2CLcDr7buI0twu3gu43b2CLcDr7buI0twv8PrZ908kBf
 </div>
 
 <div class="output_area">
-<div class="prompt"></div>
+
+    <div class="prompt"></div>
+
 
 
 
@@ -30823,7 +32181,9 @@ DXoQOxQGDXoQOxQGDXoQOxQGDXoQOxQGDXoQOxT+P3F0+AZrjsq+AAAAAElFTkSuQmCC
 </div>
 
 <div class="output_area">
-<div class="prompt"></div>
+
+    <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>images\sample_human_output.png is a human, but it looks like a English_toy_spaniel
@@ -30832,7 +32192,9 @@ DXoQOxQGDXoQOxQGDXoQOxQGDXoQOxQGDXoQOxT+P3F0+AZrjsq+AAAAAElFTkSuQmCC
 </div>
 
 <div class="output_area">
-<div class="prompt"></div>
+
+    <div class="prompt"></div>
+
 
 
 
@@ -32835,7 +34197,9 @@ wS6icaoNGjRosIv4L+LBTsHDdDeJAAAAAElFTkSuQmCC
 </div>
 
 <div class="output_area">
-<div class="prompt"></div>
+
+    <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>images\Welsh_springer_spaniel_08203.jpg is a dog. Breed: Welsh_springer_spaniel
@@ -32855,7 +34219,7 @@ wS6icaoNGjRosIv4L+LBTsHDdDeJAAAAAElFTkSuQmCC
 <div class=" highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
