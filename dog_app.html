@@ -13453,7 +13453,8 @@ Using haarcascades face detector:</p>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Question 2:</strong> This algorithmic choice necessitates that we communicate to the user that we accept human images only when they provide a clear view of a face (otherwise, we risk having unneccessarily frustrated users!). In your opinion, is this a reasonable expectation to pose on the user? If not, can you think of a way to detect humans in images that does not necessitate an image with a clearly presented face?</p>
-<p><strong>Answer:</strong></p>
+<p><strong>Answer:</strong>
+The face detector algorithm works well when face images are taken in a clear view of face. In order to recognize all faces, I think we need to train the classifier with a lot of images from different point of view.</p>
 <p>We suggest the face detector from OpenCV as a potential way to detect human images in your algorithm, but you are free to explore other approaches, especially approaches that make use of deep learning :).  Please use the code cell below to design and test your own face detection algorithm.  If you decide to pursue this <em>optional</em> task, report performance on each of the datasets.</p>
 
 </div>
@@ -13821,6 +13822,11 @@ Training, Testing and Validation data are loaded into the dataset first.
 Then, image files are cropped into 224 x 224 with centered in face (haar face detection).
 Then, 3 dimension images are converted to grayscale.
 After that, face_detector is applied for face detection and Rosenet50 is applied for dog classification. For classification of two species, we need to implement 2 algorithms and its accuracy is not good. hence we need CNN to implement the image classification.</p>
+<p>There are 3 layers in convolutions to extract the features of images. First layer has started with input shape of 224 x 224 x 3. The dataset is not too much complex and hence I have chosen 16, 32 and 64 filters for each layer. The more convolution layer,  the more complex patterns can be detected.
+kernel_size should be odd number, but here I have set them 2,2 based on image size. Strides are set to default and hence it should be 1,1.
+MaxPooling2D  is common choice to downsample in this type of classification.
+Flattening is necessary after pooling for the data to input to ANN.
+There were also dropout layers to prevent overfitting. A relu function was used in the dense layer, and then, for the output, a softmax since it's the best for classification.</p>
 
 </div>
 </div>
@@ -14448,6 +14454,8 @@ test_{network} = bottleneck_features['test']</code></pre>
 <p><strong>Question 5:</strong> Outline the steps you took to get to your final CNN architecture and your reasoning at each step.  Describe why you think the architecture is suitable for the current problem.</p>
 <p><strong>Answer:</strong> 
 Answer: The advantage of Resnet is that it solves the vanishing gradient problem while keeping an excellent performance. This allows to have a deeper neural network. They have many other advantages which allow good results.</p>
+<p>Yes, it is the good model of transfer learning.</p>
+<p>When it is compared to CNN scratch, it attained better accuracy. ResNet and VGG are pretrained networks and the pre-trained networks inside of Keras are capable of recognizing 1,000 different object categories, similar to objects we encounter in our day-to-day lives with high accuracy. ResNet50 is much deeper than VGG16 and the model size is actually substantially smaller due to the usage of global average pooling rather than fully-connected layers — this reduces the model size down to 102MB for ResNet50.</p>
 
 </div>
 </div>
@@ -14800,7 +14808,13 @@ Epoch 20/20
 <h2 id="Step-7:-Test-Your-Algorithm">Step 7: Test Your Algorithm<a class="anchor-link" href="#Step-7:-Test-Your-Algorithm">&#182;</a></h2><p>In this section, you will take your new algorithm for a spin!  What kind of dog does the algorithm think that <strong>you</strong> look like?  If you have a dog, does it predict your dog's breed accurately?  If you have a cat, does it mistakenly think that your cat is a dog?</p>
 <h3 id="(IMPLEMENTATION)-Test-Your-Algorithm-on-Sample-Images!">(IMPLEMENTATION) Test Your Algorithm on Sample Images!<a class="anchor-link" href="#(IMPLEMENTATION)-Test-Your-Algorithm-on-Sample-Images!">&#182;</a></h3><p>Test your algorithm at least six images on your computer.  Feel free to use any images you like.  Use at least two human and two dog images.</p>
 <p><strong>Question 6:</strong> Is the output better than you expected :) ?  Or worse :( ?  Provide at least three possible points of improvement for your algorithm.</p>
-<p><strong>Answer:</strong></p>
+<p><strong>Answer:</strong> 
+After testing with different images, yes, the results are better than I have expected.</p>
+<p>Improvements of Algorithms</p>
+<p>Rather than one class classification, it is better to return the top N classes with probabilities
+Fine tune the classifcation model for better accuracy (for human face detection for all angles)
+classification of images for both human and dogs in the same images.
+Need to test with dogs with other animals (for example cats, monkeys) in the same photos and improve the results</p>
 
 </div>
 </div>
